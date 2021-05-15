@@ -1,16 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "gatsby";
-import { useMenuContext } from "../../state";
+import React from "react"
+import styled from "styled-components"
+import { Link } from "gatsby"
+import { useMenuContext } from "../../state"
 
-
-const DesktopNavLinks = ({props}) => {
-  
-
-  const { closeMenu } = useMenuContext();
+const DesktopNavLinks = ({ props }) => {
+  const { closeMenu } = useMenuContext()
   return (
     <NavLinksWrapper className="nav-links">
-      {props.map((link) => (
+      {props.map(link => (
         <li key={link.label}>
           <NavLink to={`${link.url}`} className="link" onClick={closeMenu}>
             {link.label}
@@ -18,10 +15,10 @@ const DesktopNavLinks = ({props}) => {
         </li>
       ))}
     </NavLinksWrapper>
-  );
-};
+  )
+}
 
-export default DesktopNavLinks;
+export default DesktopNavLinks
 
 const NavLinksWrapper = styled.ul`
   flex: 1;
@@ -29,13 +26,11 @@ const NavLinksWrapper = styled.ul`
   justify-content: center;
   align-items: center;
   list-style: none;
-  padding-bottom: 20px ; 
-  
+  padding-bottom: 20px;
 
   li:not(:last-child) {
     margin-right: 26px;
   }
-
 
   button {
     background: transparent;
@@ -49,17 +44,15 @@ const NavLinksWrapper = styled.ul`
     li {
       padding: 12px;
       margin: 0 !important;
-      
-
     }
   }
-`;
+`
 
 export const NavLink = styled(Link)`
   position: relative;
   text-decoration: none;
   text-transform: capitalize;
-  color : white ; 
+  color: white;
   &::before {
     content: "";
     display: block;
@@ -72,8 +65,6 @@ export const NavLink = styled(Link)`
   }
   &:hover {
     width: 100%;
-    color : red ; 
+    color: red;
   }
-  
-
-`;
+`

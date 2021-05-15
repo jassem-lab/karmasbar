@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
     <>
       <Menu menu={data.allWpMenu} />
       <div>
-      <div style={{ height: "100vh" }}>Blabla</div>
+        <div style={{ height: "100vh" }}>Blabla</div>
         <div style={{ height: "100vh" }}>Blabla</div>
         <main
         // style={{overflowY:"", height:"2000px" ,margintop:"100px"}}
