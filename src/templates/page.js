@@ -11,7 +11,7 @@ class pageTemplate extends Component {
 
     return (
       <Layout>
-       hello post
+       
       </Layout>
     )
   }

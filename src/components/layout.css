@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg);
@@ -21,4 +21,70 @@ body {
 
 a {
   text-decoration: none;
+}
+.slider{
+  width: 100vw ; 
+  height : 100vh ; 
+  overflow : hidden ; 
+  position : relative ; 
+}
+.wrapper {
+  height: 100vh ;
+  transition:.5s all linear ;
+  -webkit-transition:.5s all linear ;
+  -moz-transition:.5s all linear ;
+  -ms-transition:.5s all linear ;
+  -o-transition:.5s all linear ;
+  will-change : transform ; 
+}
+.each-slide {
+  width: 100vw;
+  height: 100vh;
+  float: left;
+  line-height: 100vh;
+  font-size: 40vh;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  background-color: transparent;
+}
+/* .toggle-play{
+  background: transparent;
+  border: none;
+  height: auto;
+  position: absolute;
+  width: auto;
+  right: 5%;
+  bottom: 9px;
+  color: #3d3d3d;
+  z-index: 1000000;
+
+  
+}
+.toggle-play:hover{
+  text-decoration: none;
+  opacity: .7;
+  cursor: pointer;
+} */
+.dots-container{
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: auto;
+  text-align: center;
+  left: 50%;
+  bottom: 9px;
+  transform: translateX(-50%);
+  z-index: 10;
+  list-style-type: none;
+}
+.dots {
+  display: inline-block;
+  padding: 5px;
+}
+.dots:active button{
+  
+    color: #00D8FF;
+
 }

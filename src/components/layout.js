@@ -2,7 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Menu from "./Menu"
-
+import Slider from './slider/slider'
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -34,6 +34,7 @@ const Layout = ({ children }) => {
     <>
       <Menu menu={data.allWpMenu} />
       <div>
+        <Slider />
         <div style={{ height: "100vh" }}>Blabla</div>
         <div style={{ height: "100vh" }}>Blabla</div>
         <main
