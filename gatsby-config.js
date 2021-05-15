@@ -133,16 +133,15 @@ module.exports = {
         // Blacklisted routes using glob patterns
         excludedRoutes: ["**/posts/1456"],
         // use a custom normalizer which is applied after the built-in ones.
-        normalizer: function({ entities }) {
+        normalizer: function ({ entities }) {
           return entities
         },
       },
     },
-    
+
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-    
 }

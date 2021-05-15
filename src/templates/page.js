@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 
 class pageTemplate extends Component {
   render() {
@@ -9,9 +10,9 @@ class pageTemplate extends Component {
     console.log(currentPage)
 
     return (
-      <div>
+      <Layout>
        hello post
-      </div>
+      </Layout>
     )
   }
 }

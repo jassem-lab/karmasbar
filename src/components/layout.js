@@ -8,6 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Menu from "./Menu"
 
 import Header from "./header"
 import "./layout.css"
@@ -20,20 +21,31 @@ const Layout = ({ children }) => {
           title
         }
       }
+      allWpMenu {
+        edges {
+          node {
+            id
+            name
+            menuItems {
+              nodes {
+                label
+                url
+              }
+            }
+          }
+        }
+      }
     }
   `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
+      
+      <div>
+        <Menu menu={data.allWpMenu}/>
+        <main
+        style={{overflowY:"", height:"2000px" ,margintop:"100px"}}
+        >{children}</main>
         <footer
           style={{
             marginTop: `2rem`,
@@ -53,3 +65,4 @@ Layout.propTypes = {
 }
 
 export default Layout
+
