@@ -27,14 +27,26 @@ const Layout = ({ children }) => {
           }
         }
       }
+      allWpMediaItem {
+        edges {
+          node {
+            altText
+            id
+            title
+            sourceUrl
+            description
+          }
+        }
+      }
     }
   `)
-
+    console.log(data.allWpMediaItem.edges);
+    const sliderDetails = data.allWpMediaItem.edges
   return (
     <>
       <Menu menu={data.allWpMenu} />
       <div>
-        <Slider />
+        <Slider props ={sliderDetails} />
         <div style={{ height: "100vh" }}>Blabla</div>
         <div style={{ height: "100vh" }}>Blabla</div>
         <main

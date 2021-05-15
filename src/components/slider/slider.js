@@ -1,31 +1,45 @@
+import { motion } from "framer-motion"
 import React, { useState, useEffect } from "react"
+import { graphql } from "gatsby"
 import "./index.scss"
+
+
+
+
+
+
 const slides = [
   {
     eachSlide: "url(https://unsplash.it/1900/1024/?image=497)",
+    text: "hello",
   },
   {
     eachSlide: "url(https://unsplash.it/1900/1024/?image=291)",
+    text: "hello",
   },
   {
     eachSlide: "url(https://unsplash.it/1900/1024/?image=786)",
+    text: "hello",
   },
   {
     eachSlide: "url(https://unsplash.it/1900/1024/?image=768)",
+    text: "hello",
   },
   {
     eachSlide: "url(https://unsplash.it/1900/1024/?image=726)",
+    text: "hello",
   },
   {
     eachSlide: "url(https://unsplash.it/1900/1024/?image=821)",
+    text: "hello",
   },
 ]
 
-const Slider = () => {
-  const [active, setActive] = useState(0)
-  const [autoplay, setAutoplay] = useState(10)
-  const max = slides.length
+const Slider = ({props}) => {
 
+  const [active, setActive] = useState(0)
+  const [autoplay, setAutoplay] = useState(1)
+  const max = props.length
   const intervalBetweenSlides = () =>
     autoplay && setActive(active === max - 1 ? 0 : active + 1)
 
@@ -50,20 +64,38 @@ const Slider = () => {
   }
 
   const renderSlides = () =>
-    slides.map((item, index) => (
+    props.map((item, index) => (
       <div
         className="each-slide"
         key={index}
-        style={{ backgroundImage: item.eachSlide }}
-      ></div>
+        style={{ backgroundImage: `url(${item.node.sourceUrl})` }}
+      >
+      {console.log(item.node.sourceUrl)}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 200,
+          }}
+          animate={{
+            opacity: 1.5,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          style={{ zIndex: `9000` }}
+        >
+          {item.node.title}
+        </motion.div>
+      </div>
     ))
 
   const renderDots = () =>
-    slides.map((
-      silde,
+    props.map((
+      slide,
       index // check index
     ) => (
-      <li className={isActive(index) + " dots" } key={index}>
+      <li className={isActive(index) + " dots"} key={index}>
         <button onClick={() => setActive(index)}>
           <span>&#9679;</span>
         </button>
