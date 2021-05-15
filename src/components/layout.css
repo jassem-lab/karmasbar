@@ -1,13 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
 
-.navbar {
-  background-color: transparent;
+html {
+  box-sizing: border-box;
 }
 
-.colorChange {
-  background-color: #000 ;
+body {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
-.mobileLogo{
-  width: 50% !important;
-  height: 50% !important ; 
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+a {
+  text-decoration: none;
 }

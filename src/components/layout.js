@@ -1,16 +1,8 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Menu from "./Menu"
 
-import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -40,15 +32,19 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      
+      <Menu menu={data.allWpMenu} />
       <div>
-        <Menu menu={data.allWpMenu}/>
+      <div style={{ height: "100vh" }}>Blabla</div>
+        <div style={{ height: "100vh" }}>Blabla</div>
         <main
-        style={{overflowY:"", height:"2000px" ,margintop:"100px"}}
-        >{children}</main>
+        // style={{overflowY:"", height:"2000px" ,margintop:"100px"}}
+        >
+          {children}
+        </main>
         <footer
           style={{
-            marginTop: `2rem`,
+            position: `absolute`,
+            bottom: `0`,
           }}
         >
           © {new Date().getFullYear()}, Built with
@@ -65,4 +61,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-

@@ -72,9 +72,20 @@ const Slider = () => {
       <div
       className = 'each-slide'
       key = {index}
+      style={{backgroundImage : item.eachSlide}}
       >
-
+        
 
       </div>
-  ))
+  ));
+  const renderDots = () =>{
+    slides.map((slide,index)=>(
+      <li 
+      className={isActive(index)+ 'dots'}
+      key={index}
+      >
+       <button onClick={()=>setActive(index)}><span>&#9679;</span></button>
+      </li>
+    ))
+  }
 }
