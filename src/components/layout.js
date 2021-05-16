@@ -45,8 +45,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Menu menu={data.allWpMenu} />
+      <Slider props={sliderDetails}/>
       <div>
-        <Slider props ={sliderDetails} />
+       
         <div style={{ height: "100vh" }}>Blabla</div>
         <div style={{ height: "100vh" }}>Blabla</div>
         <main

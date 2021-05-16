@@ -1,42 +1,16 @@
 import { motion } from "framer-motion"
 import React, { useState, useEffect } from "react"
-import { graphql } from "gatsby"
+import { fadeIn } from "react-animations"
 import "./index.scss"
+import styled, { keyframes } from "styled-components"
+// import "./slider-animations.css"
 
+const fadeInAnimation = keyframes`${fadeIn}`
+const FadeInDiv = styled.div`
+  animation: 1.5s ${fadeInAnimation};
+`
 
-
-
-
-
-const slides = [
-  {
-    eachSlide: "url(https://unsplash.it/1900/1024/?image=497)",
-    text: "hello",
-  },
-  {
-    eachSlide: "url(https://unsplash.it/1900/1024/?image=291)",
-    text: "hello",
-  },
-  {
-    eachSlide: "url(https://unsplash.it/1900/1024/?image=786)",
-    text: "hello",
-  },
-  {
-    eachSlide: "url(https://unsplash.it/1900/1024/?image=768)",
-    text: "hello",
-  },
-  {
-    eachSlide: "url(https://unsplash.it/1900/1024/?image=726)",
-    text: "hello",
-  },
-  {
-    eachSlide: "url(https://unsplash.it/1900/1024/?image=821)",
-    text: "hello",
-  },
-]
-
-const Slider = ({props}) => {
-
+const Slider = ({ props }) => {
   const [active, setActive] = useState(0)
   const [autoplay, setAutoplay] = useState(1)
   const max = props.length
@@ -56,7 +30,7 @@ const Slider = ({props}) => {
 
   const setSliderStyles = () => {
     const transition = active * -100
-
+    const slides = props
     return {
       width: slides.length * 100 + "vw",
       transform: "translateX(" + transition + "vw)",
@@ -65,28 +39,22 @@ const Slider = ({props}) => {
 
   const renderSlides = () =>
     props.map((item, index) => (
+      
       <div
-        className="each-slide"
+        className="each-slide slide"
         key={index}
         style={{ backgroundImage: `url(${item.node.sourceUrl})` }}
       >
-      {console.log(item.node.sourceUrl)}
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 200,
-          }}
-          animate={{
-            opacity: 1.5,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          style={{ zIndex: `9000` }}
-        >
-          {item.node.title}
-        </motion.div>
+      {console.log(item.node)}
+        <div className={isActive(index) + "__content slider__content"} key={index}>
+          {console.log(item.node.title)}
+          <div>
+            <h1>vvv</h1>
+            <h3>vvv</h3>
+          </div>
+          
+          
+        </div>
       </div>
     ))
 

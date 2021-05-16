@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Navbar from "./nav/index"
 import { MenuProvider } from "../state"
 
