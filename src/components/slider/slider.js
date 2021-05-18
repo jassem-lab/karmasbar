@@ -45,9 +45,9 @@ const Slider = ({ props }) => {
         key={index}
         style={{ backgroundImage: `url(${item.node.sourceUrl})` }}
       >
-      {console.log(item.node)}
+   
         <div className={isActive(index) + "__content slider__content"} key={index}>
-          {console.log(item.node.title)}
+         
           <div>
             <h1>vvv</h1>
             <h3>vvv</h3>

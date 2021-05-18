@@ -2,22 +2,26 @@ import React, { Component } from "react"
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
-class pageTemplate extends Component {
-  render() {
-    const siteMetadata = this.props.data.site.siteMetadata
-    const currentPage = this.props.data.page
 
-    console.log(currentPage)
+const pageTemplate = (data) =>{
 
-    return (
-      <Layout>
-       
-      </Layout>
-    )
-  }
+  const elementorData = data.data.wpPage.content; 
+  
+  console.log(data.data.wpPage.content);
+  // console.log(elementorData);
+
+  return(
+    <>
+
+    <div 
+    dangerouslySetInnerHTML={{__html : elementorData}}
+
+    />
+
+    </>
+  )
 }
-
-export default pageTemplate
+export default pageTemplate ; 
 
 export const pageQuery = graphql`
   query currentPageQuery($id: String!) {
