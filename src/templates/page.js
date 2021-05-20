@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import '../style.css'
 
 
 const pageTemplate = (data) =>{
@@ -14,6 +15,7 @@ const pageTemplate = (data) =>{
     <>
 
     <div 
+    className=""
     dangerouslySetInnerHTML={{__html : elementorData}}
 
     />
