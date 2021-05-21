@@ -1,9 +1,10 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Menu from "./Menu"
-import Slider from './slider/slider'
+import Menu from "../nav/Menu"
+import Slider from "../slider/slider"
 import "./layout.css"
+import Footer from "../footer/footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -40,31 +41,15 @@ const Layout = ({ children }) => {
       }
     }
   `)
-    console.log(data.allWpMediaItem.edges);
-    const sliderDetails = data.allWpMediaItem.edges
+  console.log(data.allWpMediaItem.edges)
+  const sliderDetails = data.allWpMediaItem.edges
   return (
     <>
       <Menu menu={data.allWpMenu} />
-      {/* <Slider props={sliderDetails}/> */}
       <div>
-       
         <div style={{ height: "100vh" }}>Blabla</div>
-        <div style={{ height: "100vh" }}>Blabla</div>
-        <main
-        // style={{overflowY:"", height:"2000px" ,margintop:"100px"}}
-        >
-          {children}
-        </main>
-        <footer
-          style={{
-            position: `absolute`,
-            bottom: `0`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <main>{children}</main>
+        <Footer />
       </div>
     </>
   )
