@@ -12,32 +12,35 @@ body {
   color: var(--text);
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 a {
   text-decoration: none;
 }
-.slider{
-  width: 100vw ; 
-  height : 100vh ; 
-  overflow : hidden ; 
-  position : relative ; 
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 .wrapper {
-  height: 100vh ;
-  transition:.5s all linear ;
-  -webkit-transition:.5s all linear ;
-  -moz-transition:.5s all linear ;
-  -ms-transition:.5s all linear ;
-  -o-transition:.5s all linear ;
-  will-change : transform ; 
+  height: 100vh;
+  transition: 0.5s all linear;
+  -webkit-transition: 0.5s all linear;
+  -moz-transition: 0.5s all linear;
+  -ms-transition: 0.5s all linear;
+  -o-transition: 0.5s all linear;
+  will-change: transform;
 }
 .each-slide {
   width: 100vw;
@@ -68,7 +71,7 @@ a {
   opacity: .7;
   cursor: pointer;
 } */
-.dots-container{
+.dots-container {
   height: auto;
   margin: 0;
   padding: 0;
@@ -85,8 +88,6 @@ a {
   display: inline-block;
   padding: 5px;
 }
-.dots:active button{
-  
-    color: #00D8FF;
-
+.dots:active button {
+  color: #00d8ff;
 }

@@ -1,0 +1,15 @@
+.about__banner__title {
+  color: #fff;
+  font-size: 10vh;
+  line-height: 110px;
+  font-family: "ZCOOL XiaoWei", serif;
+  font-weight: 400;
+  margin: 0px 0px 0px 16px;
+}
+.about__main{
+  height : 200vh ; 
+  background-image: url(https://karmasbar.com/wp-content/uploads/2019/05/story_object01.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+

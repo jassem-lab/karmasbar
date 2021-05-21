@@ -41,13 +41,12 @@ const Layout = ({ children }) => {
       }
     }
   `)
-  console.log(data.allWpMediaItem.edges)
+
   const sliderDetails = data.allWpMediaItem.edges
   return (
     <>
       <Menu menu={data.allWpMenu} />
       <div>
-        <div style={{ height: "100vh" }}>Blabla</div>
         <main>{children}</main>
         <Footer />
       </div>
