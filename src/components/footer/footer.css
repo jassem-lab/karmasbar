@@ -5,33 +5,19 @@ footer {
   line-height: 1.5;
   padding: 50px 0px 9px 0px;
   box-sizing: border-box;
-  /* position: absolute;
-  bottom: 0; */
   clear:both ; 
   grid-row-start: 2;
   grid-row-end: 3;
   
 }
-footer a {
-  text-decoration: none;
-  color: #eee;
-}
-a:hover {
-  text-decoration: underline;
-}
-.ft-title {
-  color: #fff;
-  font-family: "Merriweather", serif;
-  font-size: 3.588516746411483vw ; 
-  padding-bottom: 0.625rem;
-}
-
-
 /* Footer main */
 .ft-main {
   padding: 1.25rem 1.875rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content:center ; 
+
+  margin : 0 auto ; 
 }
 @media only screen and (min-width: 29.8125rem /* 477px */) {
   
@@ -51,46 +37,27 @@ a:hover {
   min-width: 12.5rem;
 }
 
-/* Footer main | Newsletter form */
-form {
-  display: flex;
-  flex-wrap: wrap;
-}
-input[type="email"] {
-  border: 0;
-  padding: 0.625rem;
-  margin-top: 0.3125rem;
-}
-input[type="submit"] {
-  background-color: #00d188;
-  color: #fff;
-  cursor: pointer;
-  border: 0;
-  padding: 0.625rem 0.9375rem;
-  margin-top: 0.3125rem;
-}
 
 /* Footer legal */
+.ft-legal-list {
+  display : flex ; 
+  flex-wrap : wrap ; 
+  align-items : center ; 
+  justify-content : space-between ; 
+  flex-direction: row;
+  margin : 0 auto ; 
+  max-width : 80%;
+}
 .ft-legal {
   background-color: #191919;
   border-style: solid;
   border-width: 1px 0px 0px 0px;
   border-color: #676767ed;
+  
+
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
-.ft-legal-list {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-.ft-legal-list li {
-  white-space: nowrap;
-}
-/* one before the last child */
-.ft-legal-list li:nth-last-child(2) {
-  flex: 1;
-}
+
 .days__list {
   border-bottom: 1px dashed #eeeeee;
   padding: 10px 0;
@@ -104,11 +71,12 @@ input[type="submit"] {
 }
 .ft-days-table__title {
   color: #ed2433;
-  font-size: 2vw;
+ 
   font-weight: 400;
 }
 .ft-item__title {
-  font-size: 14px;
+  font-size: 25px ; 
+  margin-bottom : 30px ;
   font-weight: 400;
 }
 li {
@@ -116,7 +84,13 @@ li {
   display: block;
   list-style: none;
 }
-.icons__section {
-  margin-right: 200px;
-  
+
+.days__list{
+  display : flex  ;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin : 0 auto ;  
+
 }

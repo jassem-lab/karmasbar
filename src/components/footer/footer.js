@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
       <section class="ft-legal">
         <ul class="ft-legal-list">
-          <li style={{ marginLeft: `300px` }}>
+          <li >
             <p>
               {" "}
               © 2020,{" "}
