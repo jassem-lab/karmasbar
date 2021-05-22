@@ -31,7 +31,7 @@ const DesktopNav = styled.nav`
 
   background: transparent;
   color: white;
-  transition: all 150ms linear;
+  transition: all 0.5s linear;
 
   ${props =>
     props.isScrolled &&
@@ -39,6 +39,7 @@ const DesktopNav = styled.nav`
       background: black;
       box-shadow: var(--headerBoxShadow);
       color: white !important ;
+      transition: all 0.5s linear;
     `}
 
   position: fixed;
@@ -48,6 +49,7 @@ const DesktopNav = styled.nav`
   height: 64px;
   padding: 50px 0;
   z-index: 2;
+  transition: all 0.6 linear;
 
   @media screen and (max-width: 768px) {
     justify-content: space-between;
