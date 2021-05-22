@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -7,10 +8,10 @@ body {
 .about__banner__title {
   color: #fff;
   font-size: 10vh;
-  line-height: 110px;
+  line-height: 60px;
   font-family: "ZCOOL XiaoWei", serif;
   font-weight: 400;
-  margin: 0px 0px 0px 16px;
+  margin-bottom: 50px;
 }
 .about__main {
   background-image: url(https://karmasbar.com/wp-content/uploads/2019/05/story_object01.png);
@@ -126,4 +127,9 @@ body {
   margin-top: 100px;
   width: 100%;
   margin-bottom: 100px;
+}
+.about__writtenContent{
+  margin : 20px 0px 20px 0 ; 
+  max-width: 60% ;
+  margin : 0 auto ; 
 }
