@@ -2,15 +2,20 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { useMenuContext } from "../../state"
+import { menuItems } from "./NavLinksConstants"
 
-const DesktopNavLinks = ({ props }) => {
+const DesktopNavLinks = () => {
   const { closeMenu } = useMenuContext()
   return (
     <NavLinksWrapper className="nav-links">
-      {props.map(link => (
+      {menuItems.map(link => (
         <li key={link.label}>
-          <NavLink to={`${link.url}`} className="link" onClick={closeMenu}>
-            {link.label}
+          <NavLink
+            to={`${link.url}`}
+            className="link"
+            onClick={closeMenu}
+          >
+            {link.label.toUpperCase()}
           </NavLink>
         </li>
       ))}

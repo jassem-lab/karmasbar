@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import styled, { keyframes } from "styled-components"
-import { fadeInUp } from "react-animations"
+import { FadeIn } from "../components/fadeIn/fadeIn"
+import SEO from "../components/seo"
 import "./about.css"
 import aboutBanner from "../images/aboutImage.jpg"
 import Button from "../components/button/Button"
@@ -9,17 +9,10 @@ import TitleBorder from "../images/titleborder.png"
 import aboutKarma1 from "../images/aboutKarma1.png"
 import aboutKarma2 from "../images/aboutKarma2.png"
 
-const fadeInAnimation = keyframes`
-${fadeInUp}
-`
-const FadeIn = styled.div`
-  color: white;
-  animation: 1s ${fadeInAnimation};
-`
-
 const About = () => {
   return (
     <Layout>
+      <SEO title="About" />
       <div
         className="about__banner"
         style={{

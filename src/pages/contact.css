@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.contact__banner__title {
+  color: #fff;
+  font-size: 10vh;
+  line-height: 60px;
+  font-family: "ZCOOL XiaoWei", serif;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.contact__banner {
+  background-position: 60% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 150px;
+}
+.contact__container {
+  display: flex;
+  max-width: 60%;
+  margin: 60px auto !important;
+  flex : wrap ; 
+  flex-flow: row wrap;
+}
+.col {
+  margin: 20px 10px;
+  flex: 1;
+  
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+  display: flex;
+
+  text-align: center;
+}
+.contact__row__left__content {
+  margin: auto auto;
+}
+.call_us {
+  color: #2c2c2c;
+  font-size: 28px;
+  line-height: 24px;
+}
+.number {
+  color: #ed2433;
+  padding-left: 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.phone_orders {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  fill: #ed2433;
+  color: #ed2433;
+  border-bottom: 2px solid #ed2433;
+  line-height: 24px;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact__form input,
+textarea {
+  padding: 10px;
+  outline: none;
+  font-size: 80%;
+  border: 1px solid grey;
+
+  margin: 10px;
+  width: 100%;
+}
+.contact__title {
+  margin: 0 auto;
+  justify-content: center;
+}
