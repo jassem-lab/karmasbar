@@ -43,7 +43,7 @@ body {
   margin: auto auto;
 }
 .contact__row__left:hover {
-  box-shadow: 10px 8px 8px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
   transition: box-shadow 0.5s ease;
   -webkit-transition: box-shadow 0.5s ease;
   -moz-transition: box-shadow 0.5s ease;
@@ -54,6 +54,7 @@ body {
   color: #2c2c2c;
   font-size: 28px;
   line-height: 24px;
+  font-family: "ZCOOL XiaoWei", serif;
 }
 .number {
   color: #ed2433;
@@ -89,4 +90,5 @@ textarea {
 .contact__title {
   margin: 0 auto;
   justify-content: center;
+  font-family: "ZCOOL XiaoWei", serif;
 }

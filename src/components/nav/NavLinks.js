@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { useMenuContext } from "../../state"
 import { menuItems } from "./NavLinksConstants"
+import { FiPhoneCall } from "react-icons/fi"
 
 const DesktopNavLinks = () => {
   const { closeMenu } = useMenuContext()
@@ -10,15 +11,18 @@ const DesktopNavLinks = () => {
     <NavLinksWrapper className="nav-links">
       {menuItems.map(link => (
         <li key={link.label}>
-          <NavLink
-            to={`${link.url}`}
-            className="link"
-            onClick={closeMenu}
-          >
+          <NavLink to={`${link.url}`} className="link" onClick={closeMenu}>
             {link.label.toUpperCase()}
           </NavLink>
         </li>
       ))}
+      <div>
+        <span className="phone__number">
+          <FiPhoneCall />
+          +1 530-691-4061
+        </span>
+        <p className="CallUs"> Call Us For Phone Orders</p>
+      </div>
     </NavLinksWrapper>
   )
 }
@@ -54,6 +58,8 @@ const NavLinksWrapper = styled.ul`
 `
 
 export const NavLink = styled(Link)`
+  font-size: 14px;
+  font-family: "Open Sans";
   position: relative;
   text-decoration: none;
   text-transform: capitalize;

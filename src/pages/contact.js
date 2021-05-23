@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout/layout"
 import contactBanner from "../images/contactUs.jpg"
 import Button from "../components/button/Button"
@@ -9,7 +9,32 @@ import "./contact.css"
 import Recaptcha from "../components/recaptcha/recaptcha"
 import { Btn } from "../components/button/Button"
 
-const contact = () => {
+const Contact = () => {
+  const handleChange = e => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    })
+  }
+  const handleSubmit = e => {
+    fetch("/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formState }),
+    })
+    e.preventDefault()
+  }
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  })
   return (
     <Layout>
       <SEO title="Contact" />
@@ -46,12 +71,48 @@ const contact = () => {
           </div>
         </div>
         <div className="contact__row__right col">
-          <form action="" className="contact__form">
+          <form
+            onSubmit={handleSubmit}
+            className="contact__form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+          >
             <p className="contact__title">Send Message</p>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="phone" placeholder="Contact Number" required />
-            <textarea rows="10" type="text" placeholder="Message" required />
+            <input type="hidden" name="form-name" value="contact" />
+            <input
+              onChange={handleChange}
+              value={formState.name}
+              id="name"
+              type="text"
+              placeholder="Name"
+              required
+            />
+            <input
+              onChange={handleChange}
+              value={formState.email}
+              id="email"
+              type="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              onChange={handleChange}
+              value={formState.phone}
+              id="phone"
+              type="phone"
+              placeholder="Contact Number"
+              required
+            />
+            <textarea
+              onChange={handleChange}
+              value={formState.message}
+              id="message"
+              rows="10"
+              type="text"
+              placeholder="Message"
+              required
+            />
             <Recaptcha />
             <Btn style={{ marginTop: `10px` }}>
               <a type="submit" style={{ color: `white` }}>
@@ -65,4 +126,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

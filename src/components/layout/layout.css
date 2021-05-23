@@ -98,3 +98,11 @@ a {
 .dots:active button {
   color: #00d8ff;
 }
+.phone__number{
+  padding-left: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.CallUs{
+  font-size : 14px ; 
+}
