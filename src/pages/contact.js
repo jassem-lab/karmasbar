@@ -7,6 +7,8 @@ import { FadeIn } from "../components/fadeIn/fadeIn"
 import SEO from "../components/seo"
 import "./contact.css"
 import Recaptcha from "../components/recaptcha/recaptcha"
+import { Btn } from "../components/button/Button"
+
 const contact = () => {
   return (
     <Layout>
@@ -49,8 +51,13 @@ const contact = () => {
             <input type="text" placeholder="Name" required />
             <input type="email" placeholder="Email" required />
             <input type="phone" placeholder="Contact Number" required />
-            <textarea type="text" placeholder="Message" required />
+            <textarea rows="10" type="text" placeholder="Message" required />
             <Recaptcha />
+            <Btn style={{ marginTop: `10px` }}>
+              <a type="submit" style={{ color: `white` }}>
+                SEND MESSAGE
+              </a>
+            </Btn>
           </form>
         </div>
       </div>

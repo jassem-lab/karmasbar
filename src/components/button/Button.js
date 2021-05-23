@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const Btn = styled.div`
+export const Btn = styled.div`
   color: #FFFFF;
   font: 14px;
   margin: 0px 5px 0px 0px;
@@ -26,7 +26,7 @@ const Btn = styled.div`
   }
   @media all and (min-width:30em){
     display : block ; 
-    margin : 0.5em auto ;
+    
   }
 `
 
