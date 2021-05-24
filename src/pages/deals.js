@@ -64,7 +64,9 @@ const Deals = () => {
             <p>00</p>Seconds
           </div>
         </div>
-        <h2 className="countdown__message">Sorry, You Missed it! 🙁 We're Launching Our Next Promotion Soon!</h2>
+        <h2 className="countdown__message">
+          Sorry, You Missed it! 🙁 We're Launching Our Next Promotion Soon!
+        </h2>
       </div>
     </Layout>
   )

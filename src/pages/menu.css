@@ -1,0 +1,13 @@
+.menu__banner {
+  background-position: 60% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 350px;
+}
