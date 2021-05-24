@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
   const sliderDetails = data.allWpMediaItem.edges
   return (
     <>
-      <Menu menu={data.allWpMenu} />
+      <Menu />
       <div>
         <main>{children}</main>
         <Footer />
