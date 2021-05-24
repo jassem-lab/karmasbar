@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 const Happyhour = () => {
   return (
     <Layout>
-      <SEO />
+      <SEO title="Happy Hour"/>
     </Layout>
   )
 }

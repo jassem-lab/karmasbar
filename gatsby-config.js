@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Karma's House of Spirits`,
+    title: `Karma's`,
     description: ``,
     author: `@JassemGaaloul`,
   },

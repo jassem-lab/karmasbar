@@ -9,8 +9,8 @@ const DesktopNavLinks = () => {
   const { closeMenu } = useMenuContext()
   return (
     <NavLinksWrapper className="nav-links">
-      {menuItems.map(link => (
-        <li key={link.label}>
+      {menuItems.map((link, key) => (
+        <li key={key}>
           <NavLink to={`${link.url}`} className="link" onClick={closeMenu}>
             {link.label.toUpperCase()}
           </NavLink>
