@@ -1,4 +1,4 @@
-export const menuItems = [
+export const MenuItems = [
   {
     url: "/",
     label: "home",
@@ -20,7 +20,7 @@ export const menuItems = [
     label: "happy hour",
   },
   {
-    url: "/hatsnew/",
+    url: "/whatsnew/",
     label: "what's new",
   },
   {

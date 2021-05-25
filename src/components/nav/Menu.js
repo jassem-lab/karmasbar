@@ -3,8 +3,8 @@ import Navbar from "./index"
 import { MenuProvider } from "../../state"
 import {MenuItems} from "./NavLinksConstants"
 
-const Menu = ({ menu }) => {
-  //   console.log(menuItems) props
+const Menu = () => {
+  
   
   return (
     <MenuProvider>

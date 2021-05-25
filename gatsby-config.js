@@ -18,7 +18,7 @@ module.exports = {
         ],
       },
     },
-    
+
     {
       resolve: `gatsby-plugin-lodash`,
       options: {
@@ -51,6 +51,48 @@ module.exports = {
         icon: `src/images/Logo.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-plugin-local-search",
+      options: {
+        name: "posts",
+        engine: "flexsearch",
+        query: `
+        allWpPost {
+          nodes {
+            uri
+            title
+            excerpt
+            slug
+            date
+    
+            featuredImage {
+              node {
+                altText
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1000, quality: 100) {
+                      ...GatsbyImageSharpFluid_tracedSVG
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        `,
+        ref: "slug",
+        index: ["title", "excerpt"],
+        store: ["title", "excerpt", "date", "slug"],
+        normalizer: ({ data : {allWpPost} }) =>
+        allWpPost.nodes.map(node => ({
+            title: node.title,
+            excerpt: node.excerpt,
+            date: node.date,
+            slug: node.fields.slug,
+          })),
+      },
+    },
+
     {
       resolve: "gatsby-source-wordpress",
       options: {

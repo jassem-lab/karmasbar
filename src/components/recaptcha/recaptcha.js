@@ -4,7 +4,6 @@ import ReCAPTCHA from "react-google-recaptcha"
 const onChange = value => {
   console.log(("captcha value", value))
 }
-const sitekey = "6Lexe-caAAAAAJSLd4HiwN63sH-U9GHzx7VyyaN0"
 
 
 const Recaptcha = () => {
