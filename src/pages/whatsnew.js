@@ -1,9 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import Layout from "../components/layout/layout"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-import parse from "html-react-parser"
-import Image from "gatsby-image"
 import { FadeIn } from "../components/fadeIn/fadeIn"
 import NewsBanner from "../images/NewsBanner.jpg"
 import "./whatsnew.css"
@@ -12,9 +10,6 @@ import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
 import PostsPreview from "../components/post-preview/post-preview"
 
-import SearchBar from "../components/search/search"
-import { useFlexSearch } from "react-use-flexsearch"
-import { unFlattenResults } from "../components/unflattenResults"
 
 const searchClient = algoliasearch(
   "UF0VVRAUVO",
