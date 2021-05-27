@@ -3,7 +3,6 @@
 html {
   box-sizing: border-box;
   height: 100%;
-
 }
 
 body {
@@ -14,15 +13,13 @@ body {
   color: var(--text);
   font-size: 16px;
   position: relative;
-  
+
   min-height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
-
 }
 main {
   min-height: calc(100vh - 70px);
-  
 }
 
 * {
@@ -98,11 +95,31 @@ a {
 .dots:active button {
   color: #00d8ff;
 }
-.phone__number{
+.phone__number {
   padding-left: 12px;
   font-size: 20px;
   font-weight: 700;
 }
-.CallUs{
-  font-size : 14px ; 
+.CallUs {
+  font-size: 14px;
+}
+.post__section {
+  display : flex ; 
+  align-items: center; 
+  text-align: center;
+  flex-direction: column ;
+  font-family: "Open Sans";
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+  margin : 100px auto ; 
+
+}
+.post__section img {
+  width: 100% ; 
+
+}
+.post__section p {
+  padding : 10px ; 
+  text-align: start ;
 }

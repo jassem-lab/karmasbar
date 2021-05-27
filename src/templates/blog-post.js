@@ -1,7 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
 import parse from "html-react-parser"
+import NewsBanner from "../images/NewsBanner.jpg"
+import { FadeIn } from "../components/fadeIn/fadeIn"
+import { GiCampCookingPot } from "react-icons/gi"
 
 // We're using Gutenberg so we need the block styles
 // these are copied into this project due to a conflict in the postCSS
@@ -20,34 +22,44 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
     fluid: post.featuredImage?.node?.localFile?.childImageSharp?.fluid,
     alt: post.featuredImage?.node?.alt || ``,
   }
-
+  console.log(post)
   return (
     <Layout>
       <Seo title={post.title} description={post.excerpt} />
+      <div
+        className="contact__banner"
+        style={{
+          backgroundImage: `url(${NewsBanner})`,
+        }}
+      >
+        <div style={{ position: `absolute` }}>
+          <FadeIn>
+            <h2 className="contact__banner__title">{post.title}</h2>
+            <p className="happyhour__content__p" style={{ color: `white` }}>
+              {post.categories.nodes.map((item, key) => (
+                <span key={key}>{item.name}</span>
+              ))}{" "}
+              <GiCampCookingPot /> {post.title}
+            </p>
+          </FadeIn>
+        </div>
+        <div style={{ marginTop: `220px` }}></div>
+      </div>
 
       <article
-        className="blog-post"
+        className="post__section"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{parse(post.title)}</h1>
+        <h1 itemProp="headline">{parse(post.title)}</h1>
 
-          <p>{post.date}</p>
-
-          {/* if we have a featured image for this post let's display it */}
-         
-        </header>
+        <p>{post.date}</p>
 
         {!!post.content && (
-          <section itemProp="articleBody">{parse(post.content)}</section>
+          <section itemProp="articleBody" className="post__section__content">
+            {parse(post.content)}
+          </section>
         )}
-
-        <hr />
-
-        <footer>
-          <Bio />
-        </footer>
       </article>
 
       <nav className="blog-post-nav">
@@ -97,6 +109,11 @@ export const pageQuery = graphql`
       content
       title
       date(formatString: "MMMM DD, YYYY")
+      categories {
+        nodes {
+          name
+        }
+      }
 
       featuredImage {
         node {
