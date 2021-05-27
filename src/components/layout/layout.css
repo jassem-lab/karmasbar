@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 html {
   box-sizing: border-box;
@@ -6,7 +7,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg);
@@ -31,12 +32,7 @@ main {
 a {
   text-decoration: none;
 }
-.slider {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
+
 .wrapper {
   height: 100vh;
   transition: 0.5s all linear;
@@ -46,35 +42,7 @@ a {
   -o-transition: 0.5s all linear;
   will-change: transform;
 }
-.each-slide {
-  width: 100vw;
-  height: 100vh;
-  float: left;
-  line-height: 100vh;
-  font-size: 40vh;
-  text-align: center;
-  background-size: cover;
-  background-position: center center;
-  background-color: transparent;
-}
-/* .toggle-play{
-  background: transparent;
-  border: none;
-  height: auto;
-  position: absolute;
-  width: auto;
-  right: 5%;
-  bottom: 9px;
-  color: #3d3d3d;
-  z-index: 1000000;
 
-  
-}
-.toggle-play:hover{
-  text-decoration: none;
-  opacity: .7;
-  cursor: pointer;
-} */
 .dots-container {
   height: auto;
   margin: 0;
@@ -122,4 +90,14 @@ a {
 .post__section p {
   padding : 10px ; 
   text-align: start ;
+}
+.sliderTitle{
+  font-size : 20px ; 
+}
+.sliderContent{
+  font-size : 20px ; 
+  text-align : center ; 
+}
+.sliderContent Button{
+  max-width : 50px !important ; 
 }

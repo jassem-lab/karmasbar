@@ -29,7 +29,7 @@ const Postpreview = ({ hit }) => {
                 </span>
               </Link>
             </h2>
-            <small>{hit.date}</small>
+            <small>{new Date(hit.date).toLocaleDateString()}</small>
           </header>
           <section
             itemProp="description"

@@ -12,7 +12,7 @@ export const Btn = styled.div`
   box-shadow: 5px 5px 0px 0px rgb(237 36 51 / 30%);
   transition: 0.3s;
   text-align: center;
-  width: auto;
+  
   display: inline-block;
   white-space: nowrap;
   vertical-align: middle;

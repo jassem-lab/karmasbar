@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react"
-import { fadeIn } from "react-animations"
 import "./index.scss"
-import styled, { keyframes } from "styled-components"
-// import "./slider-animations.css"
+import { FadeIn } from "../fadeIn/fadeIn"
+import { sliderContent } from "./sliderContent"
+import { Animated } from "react-animated-css"
 
-const fadeInAnimation = keyframes`${fadeIn}`
-const FadeInDiv = styled.div`
-  animation: 1.5s ${fadeInAnimation};
-`
+
 
 const Slider = ({ props }) => {
   const [active, setActive] = useState(0)
-  const [autoplay, setAutoplay] = useState(1)
-  const max = props.length
+  const autoplay = 1
+  const max = sliderContent.length
   const intervalBetweenSlides = () =>
     autoplay && setActive(active === max - 1 ? 0 : active + 1)
 
@@ -29,7 +26,7 @@ const Slider = ({ props }) => {
 
   const setSliderStyles = () => {
     const transition = active * -100
-    const slides = props
+    const slides = sliderContent
     return {
       width: slides.length * 100 + "vw",
       transform: "translateX(" + transition + "vw)",
@@ -37,28 +34,31 @@ const Slider = ({ props }) => {
   }
 
   const renderSlides = () =>
-    props.map((item, index) => (
-      
+    sliderContent.map((item, index) => (
       <div
         className="each-slide slide"
         key={index}
-        style={{ backgroundImage: `url(${item.node.sourceUrl})` }}
+        style={{ backgroundImage: `url(${item.sourceUrl})` }}
       >
-   
-        <div className={isActive(index) + "__content slider__content"} key={index}>
-         
-          <div>
+        <div
+          className={isActive(index) + "__content slider__content"}
+          key={index}
+        >
+          <Animated
+            animationIn="fadeInUp"
+            isVisible={false}
+            animationInDelay="4000"
+            style={{ marginTop: `20px` }}
+          >
             <h1>vvv</h1>
-            <h3>vvv</h3>
-          </div>
-          
-          
+            <h1>vvv</h1>
+          </Animated>
         </div>
       </div>
     ))
 
   const renderDots = () =>
-    props.map((
+    sliderContent.map((
       slide,
       index // check index
     ) => (
