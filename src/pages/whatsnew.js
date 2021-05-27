@@ -7,17 +7,21 @@ import Image from "gatsby-image"
 import { FadeIn } from "../components/fadeIn/fadeIn"
 import NewsBanner from "../images/NewsBanner.jpg"
 import "./whatsnew.css"
+
+import algoliasearch from "algoliasearch/lite"
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
+import PostsPreview from "../components/post-preview/post-preview"
+
 import SearchBar from "../components/search/search"
 import { useFlexSearch } from "react-use-flexsearch"
-import {unFlattenResults} from "../components/unflattenResults"
+import { unFlattenResults } from "../components/unflattenResults"
 
-const Whatsnew = ({
-  data,
-  data: {
-    localSearchPosts ,
-    allWpPost,
-  },
-}) => {
+const searchClient = algoliasearch(
+  "UF0VVRAUVO",
+  "4d8121645a60e81ef44a947de24cf6e9"
+)
+
+const Whatsnew = ({ data, data: { allWpPost } }) => {
   // const wpPosts = data.data.allWpPost.nodes
   // console.log(wpPosts[0].featuredImage)
   // const featuredImage = wpPosts[0].featuredImage
@@ -26,19 +30,13 @@ const Whatsnew = ({
   //   alt: wpPosts[0].featuredImage?.node?.alt || ``,
   // }
 
-  console.log(data);
-  
   const image = {
     fluid: allWpPost.featuredImage?.node?.localFile?.childImageSharp?.fluid,
     alt: allWpPost.featuredImage?.node?.alt || ``,
   }
-  const { search } = window.location
-  const query = new URLSearchParams(search).get("s")
-  const [searchQuery, setSearchQuery] = useState(query || "")
-  const results = useFlexSearch(searchQuery, localSearchPosts.index , JSON.parse(localSearchPosts.store ))
-  const posts = searchQuery ? unFlattenResults(results) : allWpPost.nodes ; 
   
-  
+  const posts = allWpPost.nodes
+  console.log(posts)
 
   return (
     <Layout>
@@ -57,90 +55,31 @@ const Whatsnew = ({
         </div>
         <div style={{ marginTop: `220px` }}></div>
       </div>
-      <div className="whatsnew__content">
-        <div className="whatsnew__left">
-          <ol style={{ listStyle: `none` }} className="content">
-            {image?.fluid && (
-              <div className="about__rightContentImage rightcontentimage">
-                <Image
-                  fluid={image.fluid}
-                  alt={image.alt}
-                  className="karmasbar__image"
-                  style={{ marginBottom: `50`, width: `40%` }}
-                />
-                <div className="figmation"></div>
-              </div>
-            )}
 
-            {posts.map(post => {
-              const title = post.title
+      <InstantSearch searchClient={searchClient} indexName="karmasbar">
+        <div className="whatsnew__content">
+          <ol style={{ listStyle: `none` }} className="content"></ol>
 
-              return (
-                <li key={post.uri} className="post__desc">
-                  <article
-                    className="post-list-item"
-                    itemScope
-                    itemType="http://schema.org/Article"
-                  >
-                    <header>
-                      <h2>
-                        <Link to={post.uri} itemProp="url">
-                          <span
-                            itemProp="headline"
-                            className="about__leftContent__title"
-                          >
-                            {parse(title)}
-                          </span>
-                        </Link>
-                      </h2>
-                      <small>{post.date}</small>
-                    </header>
-                    <section
-                      itemProp="description"
-                      className="item__description description"
-                    >
-                      {parse(
-                        post.excerpt
-                          .substr(
-                            0,
-                            Math.min(
-                              post.excerpt.length,
-                              post.excerpt.lastIndexOf("")
-                            )
-                          )
-                          .concat("...")
-                      )}
-                      .....
-                    </section>
-                  </article>
-                </li>
-              )
-            })}
-          </ol>
-        </div>
-        <div className="whatsnew__right">
-          <SearchBar
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-          />
+          <div className="whatsnew__left">
+            <Hits hitComponent={PostsPreview} />
+          </div>
 
-          {/* <form className="search-box">
-            <input type="text" className="search-input" placeholder="search" />
-            <button type="submit" className="search-button">
-              <BiSearchAlt2 style={{ color: `white` }} />
-            </button>
-          </form> */}
-          <div className="recent__post">
-            <h2 className="recent__post__title">Recent Posts</h2>
-            <div className="border__bottom"></div>
-            {posts.slice(0, 5).map(post => (
-              <Link itemProp="url" to={post.uri}>
-                <span className="recent__post__content">{post.title}</span>
-              </Link>
-            ))}
+          <div className="whatsnew__right">
+
+            <SearchBox placeholder = "Search" autofocus = {true} searchAsYouType={true} showLoadingIndicator={true} style={{backgroundColor : `red`}} />
+
+            <div className="recent__post">
+              <h2 className="recent__post__title">Recent Posts</h2>
+              <div className="border__bottom"></div>
+              {posts.slice(0, 5).map(post => (
+                <Link itemProp="url" to={post.uri}>
+                  <span className="recent__post__content">{post.title}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </InstantSearch>
     </Layout>
   )
 }
@@ -149,10 +88,6 @@ export default Whatsnew
 
 export const pageQuery = graphql`
   query {
-    localSearchPosts {
-      index
-      store
-    }
     allWpPost(sort: { fields: [date] }) {
       nodes {
         uri

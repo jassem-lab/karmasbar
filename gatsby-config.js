@@ -1,3 +1,31 @@
+const postQuery = `
+  {
+     allWpPost {
+      nodes {
+        uri
+        title
+        excerpt
+        slug
+        date
+        id
+        featuredImage {
+          node {
+            id
+            link
+          }
+        }
+      }
+    }
+  }
+`
+
+const queries = [
+  {
+    query: postQuery,
+    transformer: ({ data }) => data.allWpPost.nodes,
+  },
+]
+
 module.exports = {
   siteMetadata: {
     title: `Karma's`,
@@ -5,6 +33,16 @@ module.exports = {
     author: `@JassemGaaloul`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: "UF0VVRAUVO",
+        apiKey: "3dd81f30dfe9be83ffcf1b51b644d903",
+        indexName: "karmasbar",
+        queries,
+        chunkSize: 1000,
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -49,47 +87,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/Logo.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: "gatsby-plugin-local-search",
-      options: {
-        name: "posts",
-        engine: "flexsearch",
-        query: `
-        allWpPost {
-          nodes {
-            uri
-            title
-            excerpt
-            slug
-            date
-    
-            featuredImage {
-              node {
-                altText
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 1000, quality: 100) {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        `,
-        ref: "slug",
-        index: ["title", "excerpt"],
-        store: ["title", "excerpt", "date", "slug"],
-        normalizer: ({ data : {allWpPost} }) =>
-        allWpPost.nodes.map(node => ({
-            title: node.title,
-            excerpt: node.excerpt,
-            date: node.date,
-            slug: node.fields.slug,
-          })),
       },
     },
 
