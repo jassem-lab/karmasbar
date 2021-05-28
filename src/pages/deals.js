@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import "./deals.css"
+
 import SEO from "../components/seo"
 import DealsBanner from "../images/dealsBanner.jpg"
 import { FadeIn } from "../components/fadeIn/fadeIn"

@@ -13,7 +13,7 @@ import {
 import EggBenedict from "../images/EggBenedict.jpg"
 import EggBake from "../images/EggBake.jpg"
 import BrunchSpecial from "../images/BrunchSpecial.jpg"
-import "./menu.css"
+
 
 const Menu = () => {
   return (

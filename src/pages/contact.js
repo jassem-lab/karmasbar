@@ -5,7 +5,7 @@ import Button from "../components/button/Button"
 import { FiPhoneCall } from "react-icons/fi"
 import { FadeIn } from "../components/fadeIn/fadeIn"
 import SEO from "../components/seo"
-import "./contact.css"
+
 import Recaptcha from "../components/recaptcha/recaptcha"
 import { Btn } from "../components/button/Button"
 

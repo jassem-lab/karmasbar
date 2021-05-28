@@ -4,12 +4,9 @@ import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import { FadeIn } from "../components/fadeIn/fadeIn"
 import NewsBanner from "../images/NewsBanner.jpg"
-import "./whatsnew.css"
-
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
 import PostsPreview from "../components/post-preview/post-preview"
-
 
 const searchClient = algoliasearch(
   "UF0VVRAUVO",
@@ -17,19 +14,11 @@ const searchClient = algoliasearch(
 )
 
 const Whatsnew = ({ data, data: { allWpPost } }) => {
-  // const wpPosts = data.data.allWpPost.nodes
-  // console.log(wpPosts[0].featuredImage)
-  // const featuredImage = wpPosts[0].featuredImage
-  // const image = {
-  //   fluid: wpPosts[0].featuredImage?.node?.localFile?.childImageSharp?.fluid,
-  //   alt: wpPosts[0].featuredImage?.node?.alt || ``,
-  // }
-
   const image = {
     fluid: allWpPost.featuredImage?.node?.localFile?.childImageSharp?.fluid,
     alt: allWpPost.featuredImage?.node?.alt || ``,
   }
-  
+
   const posts = allWpPost.nodes
   console.log(posts)
 
@@ -60,8 +49,13 @@ const Whatsnew = ({ data, data: { allWpPost } }) => {
           </div>
 
           <div className="whatsnew__right">
-
-            <SearchBox placeholder = "Search" autofocus = {true} searchAsYouType={true} showLoadingIndicator={true} style={{backgroundColor : `red`}} />
+            <SearchBox
+              placeholder="Search"
+              autofocus={true}
+              searchAsYouType={true}
+              showLoadingIndicator={true}
+              style={{ backgroundColor: `red` }}
+            />
 
             <div className="recent__post">
               <h2 className="recent__post__title">Recent Posts</h2>

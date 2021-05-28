@@ -8,7 +8,7 @@ import TitleBorder from "../images/titleborder.png"
 import barHappyHour from "../images/barHappyHour.jpg"
 import { happyHour } from "../components/happyHourTable/happyHour"
 import BrunchSpecial from "../images/BrunchSpecial.jpg"
-import "./happyhour.css"
+
 
 const Happyhour = () => {
   return (

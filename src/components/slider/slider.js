@@ -1,8 +1,13 @@
 import React from "react"
 import { sliderContent } from "./sliderContent"
-import Button from "../components/button/Button"
+import Button from "../button/Button"
 import AwesomeSliderStyles from "react-awesome-slider/dist/styles.css?raw"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
+import AwesomeSlider from "react-awesome-slider"
+import "react-awesome-slider/dist/styles.css"
+import CoreStyles from "react-awesome-slider/src/core/styles.scss"
+// import AnimationStyles from "react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss"
+// import AnimationStyles from "react-awesome-slider/src/styled/cube-animation/cube-animation.scss"
 const AutoplaySlider = withAutoplay(AwesomeSlider)
 
 const Slider = () => {

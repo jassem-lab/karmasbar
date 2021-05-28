@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import { FadeIn } from "../components/fadeIn/fadeIn"
 import SEO from "../components/seo"
-import "./about.css"
+
 import aboutBanner from "../images/aboutImage.jpg"
 import Button from "../components/button/Button"
 import TitleBorder from "../images/titleborder.png"
