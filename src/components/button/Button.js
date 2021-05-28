@@ -4,8 +4,8 @@ import { Link } from "gatsby"
 
 export const Btn = styled.div`
   color: #FFFFF;
-  font: 14px;
-  margin: 0px 5px 0px 0px;
+  
+  margin: 20px 5px 0px 0px;
   padding: 12px 27px;
   background-color: #ed2433;
   cursor: pointer;
@@ -24,10 +24,7 @@ export const Btn = styled.div`
   &:hover {
     background-color: gray;
   }
-  @media all and (min-width:30em){
-    display : block ; 
-    
-  }
+  
 `
 
 const Button = ({ link, text }) => {

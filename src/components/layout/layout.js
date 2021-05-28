@@ -2,12 +2,34 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Menu from "../nav/Menu"
-import Slider from "../slider/slider"
 import "./layout.css"
 import Footer from "../footer/footer"
+import { motion, AnimatePresence } from "framer-motion"
+
+const duration = 0.2
+
+const variants = {
+  initial: {
+    opacity: 0,
+    x: -window.innerWidth,
+  },
+  enter: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: duration,
+      delay: duration,
+      when: "beforeChildren",
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: duration },
+  },
+}
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+  const WpData = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -42,14 +64,22 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const sliderDetails = data.allWpMediaItem.edges
   return (
     <>
       <Menu />
-      <div>
-        <main>{children}</main>
-        <Footer />
-      </div>
+
+      <AnimatePresence>
+        <motion.main
+          variants={variants}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >
+          {children}
+        </motion.main>
+      </AnimatePresence>
+
+      <Footer />
     </>
   )
 }

@@ -9,6 +9,7 @@
     "algoliasearch": "^4.9.1",
     "babel-plugin-styled-components": "^1.12.0",
     "bluebird": "^3.7.2",
+    "framer-motion": "^4.1.17",
     "gatsby": "^3.4.1",
     "gatsby-plugin-algolia": "^0.20.0",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
