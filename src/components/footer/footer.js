@@ -40,7 +40,7 @@ const Footer = () => {
               {" "}
               © 2020,{" "}
               <a href="#" style={{ color: `#ed2433` }}>
-                Karma’s House of Spirits
+              <strong>  Karma’s House of Spirits </strong>
               </a>
               . All rights reserved
             </p>

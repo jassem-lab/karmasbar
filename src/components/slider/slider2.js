@@ -1,16 +1,18 @@
 import React from "react"
-import { sliderContent } from "./sliderContent"
-import Button from "../button/Button"
+import { sliderContent2 } from "./sliderContent2"
 import AwesomeSliderStyles from "react-awesome-slider/dist/styles.css?raw"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
 import AwesomeSlider from "react-awesome-slider"
 import "react-awesome-slider/dist/styles.css"
 import CoreStyles from "react-awesome-slider/src/core/styles.scss"
+import { FaQuoteLeft } from "react-icons/fa"
+import TitleBorder from "../../images/titleborder.png"
+
 // import AnimationStyles from "react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss"
 // import AnimationStyles from "react-awesome-slider/src/styled/cube-animation/cube-animation.scss"
 const AutoplaySlider = withAutoplay(AwesomeSlider)
 
-const Slider = () => {
+const Slider2 = () => {
   return (
     <div className="">
       <AutoplaySlider
@@ -21,25 +23,38 @@ const Slider = () => {
         interval={3000}
         cssModule={(AwesomeSliderStyles, CoreStyles)}
       >
-        {sliderContent.map(item => (
+        {sliderContent2.map(item => (
           <div
             style={{
-              backgroundImage: `url(${item.sourceUrl})`,
-              backgroundRepeat: `no-repeat`,
-              backgroundSize: `cover`,
-              height: `650px`,
-              backgroundPosition: `50% 50%`,
+              backgroundColor: `transparent`,
+              padding: `0 300px`,
               display: `flex`,
               flexDirection: `column`,
               textAlign: `center`,
+              color: `white`,
+              margin: `0 auto`,
+              color: `#fff`,
+              fontFamily: `"Open Sans",Sans-serif`,
+              fontSize: `20px`,
+              fontStyle: `italic`,
+              lineHeight: `32px`,
             }}
           >
-           
-              <span className="sliderAlt">{item.sliderAlt}</span>
-            
-            <h1 className="sliderTitle">{item.sliderTitle}</h1>
-            <p className="sliderDesc">{item.sliderDesc}</p>
-            <Button text={item.sliderLinkPath} link={item.sliderLinkUrl} />
+            <h3 className="about__leftContent__title">Good Vibes Only</h3>
+            <img src={TitleBorder} className="about__titleBorder" />
+            <div>
+              <FaQuoteLeft
+                style={{
+                  fontSize: `80px`,
+                  display: `block`,
+                  marginBottom: `-45px`,
+                  color: `rgba(241,236,233,.29)`,
+                  textAlign: `center`,
+                }}
+              />
+              <p>{item.text}</p>
+            </div>
+            <h4>{item.author}</h4>
           </div>
         ))}
       </AutoplaySlider>
@@ -47,4 +62,4 @@ const Slider = () => {
   )
 }
 
-export default Slider
+export default Slider2

@@ -75,6 +75,8 @@ const Whatsnew = ({ data, data: { allWpPost } }) => {
 
 export default Whatsnew
 
+
+
 export const pageQuery = graphql`
   query {
     allWpPost(sort: { fields: [date] }) {

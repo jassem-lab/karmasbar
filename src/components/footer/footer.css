@@ -8,6 +8,7 @@ footer {
   clear:both ; 
   grid-row-start: 2;
   grid-row-end: 3;
+
   
 }
 /* Footer main */
@@ -47,6 +48,7 @@ footer {
   flex-direction: row;
   margin : 0 auto ; 
   max-width : 80%;
+  font-weight: 500 ;
 }
 .ft-legal {
   background-color: #191919;

@@ -60,6 +60,7 @@ const NavLinksWrapper = styled.ul`
 export const NavLink = styled(Link)`
   font-size: 14px;
   font-family: "Open Sans";
+  font-weight: 700;
   position: relative;
   text-decoration: none;
   text-transform: capitalize;

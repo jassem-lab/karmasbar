@@ -17,7 +17,7 @@ const Lightbox = ({
   const array = []
 
   images.forEach(image =>
-    array.push(<NonStretchedImage src={image} />)
+    array.push(<NonStretchedImage fluid={image.node.childImageSharp.fluid} />)
   )
 
   return (
