@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 
 const NonStretchedImage = props => {
   let normalizedProps = props
-  console.log(props.fluid.presentationWidth )
+  console.log(props.fluid.presentationWidth)
   if (props.fluid && props.fluid.presentationWidth) {
     normalizedProps = {
       ...props,
@@ -14,8 +14,8 @@ const NonStretchedImage = props => {
         height: window.innerHeight - 50,
         width: "auto",
         margin: "50px auto 50px",
-         // Used to center the image
-         marginBottom : "50px"
+        // Used to center the image
+        marginBottom: "50px",
       },
     }
   }
