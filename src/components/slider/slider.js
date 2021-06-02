@@ -6,13 +6,12 @@ import withAutoplay from "react-awesome-slider/dist/autoplay"
 import AwesomeSlider from "react-awesome-slider"
 import "react-awesome-slider/dist/styles.css"
 import CoreStyles from "react-awesome-slider/src/core/styles.scss"
-// import AnimationStyles from "react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss"
-// import AnimationStyles from "react-awesome-slider/src/styled/cube-animation/cube-animation.scss"
+
 const AutoplaySlider = withAutoplay(AwesomeSlider)
 
 const Slider = () => {
   return (
-    <div className="">
+    <div>
       <AutoplaySlider
         animation="cube"
         className="slider"
@@ -34,9 +33,7 @@ const Slider = () => {
               textAlign: `center`,
             }}
           >
-           
-              <span className="sliderAlt">{item.sliderAlt}</span>
-            
+            <span className="sliderAlt">{item.sliderAlt}</span>
             <h1 className="sliderTitle">{item.sliderTitle}</h1>
             <p className="sliderDesc">{item.sliderDesc}</p>
             <Button text={item.sliderLinkPath} link={item.sliderLinkUrl} />
