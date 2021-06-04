@@ -736,7 +736,7 @@ textarea {
   /* display the anchor links in a grid */
   display: grid;
   grid-template-columns: repeat(auto-fit, 150px);
-  grid-auto-rows: 150px;
+  grid-auto-rows: 300px;
   /* center the content horizontally & vertically */
   justify-content: center;
   align-content: center;
@@ -770,7 +770,8 @@ textarea {
 .gallery__image img:focus img,
 .gallery__image img:hover img {
   transform: scale(1.1);
-  filter: brightness(1);
+  filter: brightness(1.5);
+  -webkit-filter: brightness(1.5);
 }
 
 .gallery__image {
@@ -829,7 +830,7 @@ textarea {
   background-image: ("../../images/daily_offer_object02.png");
   background-position: bottom right;
   background-repeat: no-repeat;
-  opacity: 0.5;
+
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .home__ThirdBanner {
@@ -890,6 +891,27 @@ textarea {
   max-width: 350px;
   flex: 1;
   padding: 30px 20px;
+}
+
+.ais-SearchBox-input {
+  font-style: italic;
+  font-weight: 600;
+  border-radius: 0;
+  height: 50px;
+  font-size: 14px;
+  line-height: 28px;
+  padding: 0 25px;
+  border: 1px solid #ced4da !important;
+  border-right: none;
+}
+
+.ais-SearchBox-form Button {
+  background: #ed2433;
+  color: #fff;
+  height: 50px;
+  padding: 0 20px;
+  cursor: pointer;
+  border: 1px solid #ced4da;
 }
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {

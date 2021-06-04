@@ -30,7 +30,7 @@ const IndexPage = ({ data: { allWpPost } }) => {
       <div className="homepage__content">
         <div className="homepage__services">
           <div className="homepage__services__box">
-              <img src={table} alt="table" style={{width : `100px`}}/>
+            <img src={table} alt="table" style={{ width: `100px` }} />
             <h3 className="homepage__services__title">
               Relaxing <span className="colored__part">Atmosphere</span>
             </h3>
@@ -40,7 +40,7 @@ const IndexPage = ({ data: { allWpPost } }) => {
             </p>
           </div>
           <div className="homepage__services__box">
-          <img src={food} alt="table" style={{width : `100px`}}/>
+            <img src={food} alt="table" style={{ width: `100px` }} />
             <h3 className="homepage__services__title">
               Real <span className="colored__part"> Quality Food</span>
             </h3>
@@ -50,7 +50,7 @@ const IndexPage = ({ data: { allWpPost } }) => {
             </p>
           </div>
           <div className="homepage__services__box">
-          <img src={dollar} alt="table" style={{width : `100px`}}/>
+            <img src={dollar} alt="table" style={{ width: `100px` }} />
             <h3 className="homepage__services__title">
               <span className="colored__part"> Happy Hour</span> All Week
             </h3>
@@ -173,7 +173,12 @@ const IndexPage = ({ data: { allWpPost } }) => {
                   />
                 </Link>
                 <Link to={item.uri}>
-                  <h4 className="about__leftContent__title" style={{fontSize : `30px`}}>{item.title}</h4>
+                  <h4
+                    className="about__leftContent__title"
+                    style={{ fontSize: `30px` }}
+                  >
+                    {item.title}
+                  </h4>
                 </Link>
                 <p className="happyhour__content__p">{parse(item.excerpt)}</p>
                 <Button link={item.uri} text={"READ MORE >>"} />

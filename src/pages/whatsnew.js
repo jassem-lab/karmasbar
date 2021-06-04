@@ -42,12 +42,11 @@ const Whatsnew = ({ data, data: { allWpPost } }) => {
 
       <InstantSearch searchClient={searchClient} indexName="karmasbar">
         <div className="whatsnew__content">
-          <ol style={{ listStyle: `none` }} className="content"></ol>
-
-          <div className="whatsnew__left">
-            <Hits hitComponent={PostsPreview} />
-          </div>
-
+          <ol style={{ listStyle: `none` }} className="content">
+            <div className="whatsnew__left">
+              <Hits hitComponent={PostsPreview} />
+            </div>
+          </ol>
           <div className="whatsnew__right">
             <SearchBox
               placeholder="Search"
