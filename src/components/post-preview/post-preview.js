@@ -8,8 +8,8 @@ const Postpreview = ({ hit }) => {
     <>
       <div className="about__rightContentImage rightcontentimage">
         <Image
-          fluid={hit.featuredImage.node.link}
-          alt={hit.featuredImage.node.id}
+          fluid={hit?.featuredImage?.node?.link || ``}
+          alt={hit.featuredImage?.node?.id || ``}
           className="karmasbar__image"
           style={{ marginBottom: `50`, width: `40%` }}
         />

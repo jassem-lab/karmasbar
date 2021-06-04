@@ -17,9 +17,9 @@ const Footer = () => {
           </div>
         </section>
         <section className="ft-item ft-days-table">
-          <h2 className="ft-days-table__title">
+          <h3 className="ft-days-table__title">
             If We’re Busy We’ll Be Open Past 8pm, Call & Ask!
-          </h2>
+          </h3>
           {timeTable.map((item, key) => (
             <ul>
               <li key={key} className="days__list">
