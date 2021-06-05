@@ -3,7 +3,6 @@ import { graphql, StaticQuery } from "gatsby"
 import ThumbGrid from "./thumbnails"
 import LightBox from "./lightbox"
 
-
 const GalleryComponent = props => {
   const [showLightbox, setShowLightbox] = useState(false)
   const [selectedImage, setSelectedImage] = useState(null)
@@ -48,7 +47,7 @@ const GalleryComponent = props => {
             edges {
               node {
                 childImageSharp {
-                  fluid(maxHeight: 500) {
+                  fluid(maxHeight: 300) {
                     ...GatsbyImageSharpFluid
                     presentationWidth
                   }
@@ -62,19 +61,19 @@ const GalleryComponent = props => {
         const images = data.source.edges
         return (
           <div className="">
-            <div className="column">
+            <div className="">
               <ThumbGrid images={images} handleOpen={handleOpen} />
             </div>
 
-              {showLightbox && selectedImage !== null && (
-                <LightBox
-                  images={images}
-                  handleClose={handleClose}
-                  handleNextRequest={handleNextRequest}
-                  handlePrevRequest={handlePrevRequest}
-                  selectedImage={selectedImage}
-                />
-              )}
+            {showLightbox && selectedImage !== null && (
+              <LightBox
+                images={images}
+                handleClose={handleClose}
+                handleNextRequest={handleNextRequest}
+                handlePrevRequest={handlePrevRequest}
+                selectedImage={selectedImage}
+              />
+            )}
           </div>
         )
       }}

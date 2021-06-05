@@ -41,7 +41,11 @@ const About = () => {
                 <span style={{ color: `#2c2c2c` }}>From What The Blue</span> to
                 Brand Spankin New
               </h2>
-              <img src={TitleBorder} className="about__titleBorder" />
+              <img
+                src={TitleBorder}
+                alt="titleBorder"
+                className="about__titleBorder"
+              />
               <p className="about__paragraphe">
                 After four years of chaos, we finally achieved our goal of
                 rehabilitating one of the worst buildings on Lake BLVD.
@@ -85,7 +89,11 @@ const About = () => {
                   </span>{" "}
                   That's Right Next Door
                 </h2>
-                <img src={TitleBorder} className="about__titleBorder" />
+                <img
+                  src={TitleBorder}
+                  alt="titleBorder"
+                  className="about__titleBorder"
+                />
                 <p className="about__paragraphe">
                   As a small Mother & Son-owned establishment, we aim to provide
                   a<strong> friendly relaxing atmosphere</strong>

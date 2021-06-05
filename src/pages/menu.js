@@ -14,7 +14,6 @@ import EggBenedict from "../images/EggBenedict.jpg"
 import EggBake from "../images/EggBake.jpg"
 import BrunchSpecial from "../images/BrunchSpecial.jpg"
 
-
 const Menu = () => {
   return (
     <Layout>
@@ -30,7 +29,11 @@ const Menu = () => {
         <h2 className="menu__content__title">
           <span style={{ color: `#2c2c2c` }}>Appetizers</span>
           <div>
-            <img src={TitleBorder} className="about__titleBorder" />
+            <img
+              src={TitleBorder}
+              alt="title border"
+              className="about__titleBorder"
+            />
           </div>
         </h2>
         <p className="menu__description">
@@ -56,7 +59,11 @@ const Menu = () => {
         <h2 className="menu__content__title">
           <span style={{ color: `#2c2c2c` }}>Sandwiches</span>
           <div>
-            <img src={TitleBorder} className="about__titleBorder" />
+            <img
+              src={TitleBorder}
+              alt="titleBorder"
+              className="about__titleBorder"
+            />
           </div>
         </h2>
         <p className="menu__description">
@@ -82,7 +89,11 @@ const Menu = () => {
         <h2 className="menu__content__title">
           <span style={{ color: `#2c2c2c` }}>Salads</span>
           <div>
-            <img src={TitleBorder} className="about__titleBorder" />
+            <img
+              src={TitleBorder}
+              alt="titleBorder"
+              className="about__titleBorder"
+            />
           </div>
         </h2>
         <p className="menu__description">
@@ -108,7 +119,11 @@ const Menu = () => {
         <h2 className="menu__content__title">
           <span style={{ color: `#2c2c2c` }}>Other Items</span>
           <div>
-            <img src={TitleBorder} className="about__titleBorder" />
+            <img
+              src={TitleBorder}
+              alt="titleBorder"
+              className="about__titleBorder"
+            />
           </div>
         </h2>
         <div className="menu__table">

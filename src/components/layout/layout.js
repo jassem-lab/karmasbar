@@ -32,41 +32,6 @@ const Layout = ({ children }) => {
     },
   }
 
-  const WpData = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-      allWpMenu {
-        edges {
-          node {
-            id
-            name
-            menuItems {
-              nodes {
-                label
-                url
-              }
-            }
-          }
-        }
-      }
-      allWpMediaItem {
-        edges {
-          node {
-            altText
-            id
-            title
-            sourceUrl
-            description
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <Menu />

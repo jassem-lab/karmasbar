@@ -43,7 +43,7 @@ const Happyhour = () => {
               No Restrictions on Premium Spirits or Import Beers!
             </span>
           </h2>
-          <img src={TitleBorder} className="about__titleBorder" />
+          <img src={TitleBorder} alt="title border" className="about__titleBorder" />
           <p className="happyhour__content__p">
             During our Happy Hours, everything on our shelves qualifies, with{" "}
             <strong>

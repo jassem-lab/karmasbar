@@ -25,13 +25,14 @@ const Slider2 = () => {
       >
         {sliderContent2.map(item => (
           <div
+          className="secondSlider"
             style={{
               backgroundColor: `transparent`,
               padding: `0 300px`,
               display: `flex`,
               flexDirection: `column`,
               textAlign: `center`,
-              color: `white`,
+
               margin: `0 auto`,
               color: `#fff`,
               fontFamily: `"Open Sans",Sans-serif`,

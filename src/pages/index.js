@@ -76,7 +76,11 @@ const IndexPage = ({ data: { allWpPost } }) => {
           <h1 className="about__leftContent__title ">
             Hello to Home-Style Fresh Food
           </h1>
-          <img src={TitleBorder} className="about__titleBorder" />
+          <img
+            src={TitleBorder}
+            alt="titleBorder"
+            className="about__titleBorder"
+          />
           <p className="homepage__services__desc">
             Karma’s House of Spirit’s is Redding’s newest 21 & older bar. Fully
             remodeled from the ground up, featuring 7 flat-screen TVs, Two pool
@@ -93,8 +97,8 @@ const IndexPage = ({ data: { allWpPost } }) => {
             <strong>relaxing atmosphere, friendly people</strong>, and good
             food, come and see what Karma’s is all about.
           </p>
-          <div className="gallery"> </div>
-          <Gallery />
+          <div className="gallery"></div>
+         <Gallery/>
         </div>
         <div className="home__second__banner">
           <div className="home__second__banner__content">
@@ -135,7 +139,11 @@ const IndexPage = ({ data: { allWpPost } }) => {
           <h3 className="about__leftContent__title">
             <span style={{ color: `#2c2c2c` }}>Special</span> Offers
           </h3>
-          <img src={TitleBorder} className="about__titleBorder" />
+          <img
+            src={TitleBorder}
+            alt="titleBorder"
+            className="about__titleBorder"
+          />
           <div className="about__rightContentImage ">
             <img
               src={AppetizerOffer}
@@ -158,7 +166,11 @@ const IndexPage = ({ data: { allWpPost } }) => {
           <h3 className="about__leftContent__title">
             <span style={{ color: `#2c2c2c` }}>what's</span> Happening
           </h3>
-          <img src={TitleBorder} className="about__titleBorder" />
+          <img
+            src={TitleBorder}
+            alt="titleBorder"
+            className="about__titleBorder"
+          />
           <div className="whats__happening__container">
             {posts.slice(0, 3).map((item, key) => (
               <div className="whats__happening__box" key={key}>

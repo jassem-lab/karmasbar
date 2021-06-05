@@ -730,67 +730,32 @@ textarea {
   text-align: center;
   color: #000;
 }
-.column {
-  max-width: 800px;
-  width: 90vw;
-  /* display the anchor links in a grid */
+
+.gallery__image {
+  width: 80%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 150px);
-  grid-auto-rows: 300px;
-  /* center the content horizontally & vertically */
-  justify-content: center;
-  align-content: center;
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
-
-.gallery__image:nth-of-type(2) {
-  grid-column: span 2;
+.image-card {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
-.gallery__image:nth-of-type(5) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-.gallery__image:nth-of-type(7) {
-  grid-row: span 2;
-}
-.gallery__image {
-  object-fit: cover;
-  display: block;
+.image {
   width: 100%;
-  height: 100%;
-  /*transitionthescaleandbrightnessoftheimagewhenhover/focus-ingontheanchorlink*/
-  filter: brightness(0.6);
-  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-}
-.gallery__image img:focus img,
-.gallery__image img:hover img {
-  transform: scale(1.1);
-  filter: brightness(1.5);
-  -webkit-filter: brightness(1.5);
 }
 
-.gallery__image {
-  height: 30vh;
-  width: 25vw;
-  border-radius: 4;
-}
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex-direction: column;
-    flex: 50%;
-    max-width: 100%;
-  }
-}
+
 .gallery {
   width: 100%;
   height: 90px;
-  margin-left: 300px;
+  /* margin-left: 300px; */
   margin-top: 80px;
   background-image: url("../../images/story_object02.png");
   background-position: top right;
@@ -820,6 +785,30 @@ textarea {
   flex: 1;
   font-family: "Open Sans";
   font-weight: 400;
+}
+.secondSlider {
+  background-color: transparent;
+  padding: 0 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  margin: 0 auto;
+  color: #fff;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 32px;
+}
+@media (max-width: 768px) {
+  .home__second__banner__content {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 768px) {
+  .secondSlider {
+    padding: 0 !important;
+  }
 }
 .home__second__banner__image {
   flex: 1;

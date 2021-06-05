@@ -4,16 +4,16 @@ import parse from "html-react-parser"
 import NewsBanner from "../images/NewsBanner.jpg"
 import { FadeIn } from "../components/fadeIn/fadeIn"
 import { GiCampCookingPot } from "react-icons/gi"
+import Img from "gatsby-image"
 
 // We're using Gutenberg so we need the block styles
 // these are copied into this project due to a conflict in the postCSS
 // version used by the Gatsby and @wordpress packages that causes build
 // failures.
 // @todo update this once @wordpress upgrades their postcss version
-import "../css/@wordpress/block-library/build-style/style.css"
-import "../css/@wordpress/block-library/build-style/theme.css"
+// import "../css/@wordpress/block-library/build-style/style.css"
+// import "../css/@wordpress/block-library/build-style/theme.css"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout/layout"
 import Seo from "../components/seo"
 
@@ -34,6 +34,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
       >
         <div style={{ position: `absolute` }}>
           <FadeIn>
+            <Img fluid={featuredImage.fluid} alt={featuredImage.alt}/>
             <h2 className="contact__banner__title">{post.title}</h2>
             <p className="happyhour__content__p" style={{ color: `white` }}>
               {post.categories.nodes.map((item, key) => (

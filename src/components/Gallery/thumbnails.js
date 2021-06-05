@@ -24,16 +24,22 @@ const style = theme => ({
 })
 
 const ThumbGrid = ({ images, handleOpen, classes }) => {
-  return images.map((image, i) => (
-    <div className="gallery__image">
-      <ButtonBase onClick={handleOpen(i)} className={classes.previewButton}>
-        <Img
-          fluid={image.node.childImageSharp.fluid}
-          className={classes.thumbnail}
-        />
-      </ButtonBase>
-    </div>
-  ))
+  return (
+    <>
+      <div className="gallery__image">
+        {images.map((image, i) => (
+          <div className="image-card">
+            <ButtonBase onClick={handleOpen(i)} className="image">
+              <Img
+                fluid={image.node.childImageSharp.fluid}
+                className={classes.thumbnail}
+              />
+            </ButtonBase>
+          </div>
+        ))}
+      </div>
+    </>
+  )
 }
 
 ThumbGrid.propTypes = {

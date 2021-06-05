@@ -14,11 +14,11 @@ const searchClient = algoliasearch(
 )
 
 const Whatsnew = ({ data, data: { allWpPost } }) => {
-  const image = {
-    fluid:
-      allWpPost.featuredImage?.node?.localFile?.childImageSharp?.fluid || ``,
-    alt: allWpPost.featuredImage?.node?.alt || ``,
-  }
+  // const image = {
+  //   fluid:
+  //     allWpPost.featuredImage?.node?.localFile?.childImageSharp?.fluid || ``,
+  //   alt: allWpPost.featuredImage?.node?.alt || ``,
+  // }
 
   const posts = allWpPost.nodes
 
