@@ -99,6 +99,9 @@ a {
 .slider {
   height: 650px !important ;
 }
+.awssld__bullets {
+  display: none !important;
+}
 .sliderTitle {
   color: #ed2433;
   font-size: 160px;
@@ -732,11 +735,11 @@ textarea {
 }
 
 .gallery__image {
-  width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
+
 .image-card {
   padding: 5px;
   border: 1px solid #ddd;
@@ -750,6 +753,15 @@ textarea {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .gallery__image {
+    display: flex;
+    flex-direction: column;
+  }
+  .image {
+    width: 100%;
+  }
+}
 /* Responsive layout - makes a two column-layout instead of four columns */
 
 .gallery {

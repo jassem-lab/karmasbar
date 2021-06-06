@@ -13,12 +13,13 @@ const Slider = () => {
   return (
     <div>
       <AutoplaySlider
-        animation="cube"
+        bullets="false"
+       
         className="slider"
         play={true}
         cancelOnInteraction={false} // should stop playing on user interaction
         interval={3000}
-        cssModule={(AwesomeSliderStyles, CoreStyles)}
+        // cssModule={(AwesomeSliderStyles, CoreStyles)}
       >
         {sliderContent.map(item => (
           <div

@@ -6,7 +6,6 @@ import { withStyles, ButtonBase, Grid } from "@material-ui/core"
 
 const style = theme => ({
   previewButton: {
-    display: "inline-block",
     background: "transparent",
     border: "none",
     padding: 0,
@@ -24,6 +23,7 @@ const style = theme => ({
 })
 
 const ThumbGrid = ({ images, handleOpen, classes }) => {
+  console.log(classes)
   return (
     <>
       <div className="gallery__image">

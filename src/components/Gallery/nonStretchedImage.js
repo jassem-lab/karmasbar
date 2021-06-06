@@ -12,10 +12,11 @@ const NonStretchedImage = props => {
       ...props,
       style: {
         ...(props.style || {}),
-        maxWidth: `80%`,
+        maxWidth: `100%`,
         // // maxHeight: window.innerHeight - 50px,
         height: width - 50,
-        width: "auto",
+        width: "100%",
+        padding : `100px`,
         margin: "50px auto 50px",
         // Used to center the image
         marginBottom: "50px",

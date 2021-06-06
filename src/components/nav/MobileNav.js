@@ -22,7 +22,7 @@ export default MobileNavbar
 
 const MobileNav = styled.nav`
   position: fixed;
-  top: 5%;
+  top: 6%;
   margin: auto;
   height: 100%;
   width: 100%;

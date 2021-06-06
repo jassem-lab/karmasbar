@@ -46,25 +46,26 @@ const DesktopNav = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  height: 64px;
+  height: 68px;
   padding: 45px 0;
   z-index: 3;
   transition: all 0.6 linear;
 
   @media screen and (max-width: 768px) {
     justify-content: space-between;
-    padding: 10px 30px;
+    padding: 30px 30px;
+    height: 72px;
   }
 
   .logo {
     flex: 1;
     margin-left: 20px;
-    max-width: 150px;
+    max-width: 200px;
     @media screen and (max-width: 768px) {
       padding-top: 20px;
       padding-left: 20px;
-      height: 50%;
-      width: 60%;
+      height: 65%%;
+      width: 70%;
       z-index: 3000;
     }
   }

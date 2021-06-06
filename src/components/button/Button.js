@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 export const Btn = styled.div`
   color: #FFFFF;
-  
+
   margin: 20px 5px 0px 0px;
   padding: 12px 27px;
   background-color: #ed2433;
@@ -12,7 +12,7 @@ export const Btn = styled.div`
   box-shadow: 5px 5px 0px 0px rgb(237 36 51 / 30%);
   transition: 0.3s;
   text-align: center;
-  
+
   display: inline-block;
   white-space: nowrap;
   vertical-align: middle;
@@ -24,13 +24,12 @@ export const Btn = styled.div`
   &:hover {
     background-color: gray;
   }
-  
 `
 
 const Button = ({ link, text }) => {
   return (
     <Btn>
-      <Link to={link} style={{ textDecoration: `none`, color: `white`, fontSize : `1vw` }}>
+      <Link to={link} style={{ textDecoration: `none`, color: `white` }}>
         {text}
       </Link>
     </Btn>

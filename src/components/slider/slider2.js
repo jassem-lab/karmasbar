@@ -16,6 +16,7 @@ const Slider2 = () => {
   return (
     <div className="">
       <AutoplaySlider
+        bullets="false"
         animation="cube"
         className="slider"
         play={true}
@@ -25,10 +26,10 @@ const Slider2 = () => {
       >
         {sliderContent2.map(item => (
           <div
-          className="secondSlider"
+            className="secondSlider"
             style={{
               backgroundColor: `transparent`,
-              padding: `0 300px`,
+              padding: `0 10px`,
               display: `flex`,
               flexDirection: `column`,
               textAlign: `center`,
@@ -41,8 +42,10 @@ const Slider2 = () => {
               lineHeight: `32px`,
             }}
           >
-            <h3 className="about__leftContent__title">Good Vibes Only</h3>
-            <img src={TitleBorder} className="about__titleBorder" />
+            <div>
+              <h3 className="about__leftContent__title">Good Vibes Only</h3>
+              <img src={TitleBorder} className="about__titleBorder" />
+            </div>
             <div>
               <FaQuoteLeft
                 style={{
