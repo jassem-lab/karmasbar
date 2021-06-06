@@ -60,7 +60,7 @@ const GalleryComponent = props => {
       render={data => {
         const images = data.source.edges
         return (
-          <div className="">
+          <div className="galleryContainer">
             <div className="">
               <ThumbGrid images={images} handleOpen={handleOpen} />
             </div>

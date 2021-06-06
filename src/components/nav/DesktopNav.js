@@ -60,8 +60,9 @@ const DesktopNav = styled.nav`
   .logo {
     flex: 1;
     margin-left: 20px;
-    max-width: 200px;
+    max-width: 150px;
     @media screen and (max-width: 768px) {
+      max-width: 250px;
       padding-top: 20px;
       padding-left: 20px;
       height: 65%%;

@@ -182,7 +182,11 @@ body {
 .about__paragraphe {
   font-size: 16px;
 }
-
+.backgroundImageSpecialOffers {
+  background-image: url("../../images/daily_offer_object01.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
 .about__rightContentImage {
   flex: 50%;
   position: relative;
@@ -196,11 +200,11 @@ body {
 .about__rightContentImage * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  transition: all 0.35s ease;
-  -webkit-transition: all 0.35s ease;
-  -moz-transition: all 0.35s ease;
-  -ms-transition: all 0.35s ease;
-  -o-transition: all 0.35s ease;
+  transition: all 0.45s ease;
+  -webkit-transition: all 0.45s ease;
+  -moz-transition: all 0.45s ease;
+  -ms-transition: all 0.45s ease;
+  -o-transition: all 0.45s ease;
 }
 .about__rightContentImage img {
   max-width: 100%;
@@ -728,11 +732,20 @@ textarea {
   font-weight: 400;
 }
 .welcome__content {
+  background-image: url("../../images/story_object01.png");
+  background-position: top left;
+  background-repeat: no-repeat;
   text-align: center;
-  max-width: 60%;
   margin: 50px auto;
 }
-
+.content_welcome {
+  max-width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
 .blackTitle {
   text-align: center;
   color: #000;
@@ -741,12 +754,12 @@ textarea {
 .gallery__image {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 3px;
 }
 
 .image-card {
   padding: 5px;
-  border: 1px solid #ddd;
+
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -766,12 +779,18 @@ textarea {
     width: 100%;
   }
 }
+
 /* Responsive layout - makes a two column-layout instead of four columns */
+
+.galleryContainer {
+  display: flex;
+  justify-content: center;
+}
 
 .gallery {
   width: 100%;
   height: 90px;
-  /* margin-left: 300px; */
+  margin-left: 70%;
   margin-top: 80px;
   background-image: url("../../images/story_object02.png");
   background-position: top right;
@@ -832,10 +851,9 @@ textarea {
 .specialOffers {
   margin-top: 80px;
   text-align: center;
-  background-image: ("../../images/daily_offer_object02.png");
+  background-image: url("../../images/daily_offer_object02.png");
   background-position: bottom right;
   background-repeat: no-repeat;
-
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .home__ThirdBanner {
@@ -868,7 +886,7 @@ textarea {
   text-align: center;
   margin-top: 80px;
   margin-bottom: 30px;
-  background-image: ("../../images/news_object01.png");
+  background-image: url("../../images/news_object01.png");
   background-position: top right;
   background-repeat: no-repeat;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
@@ -878,8 +896,8 @@ textarea {
   -o-transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .whats__happening__container {
-  background-image: ("../../images/news_object02.png");
-  background-position: bottom left;
+  background-image: url("../../images/news_object02.png");
+  background-position: top left;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: row;

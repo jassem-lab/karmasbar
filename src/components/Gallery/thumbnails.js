@@ -26,15 +26,19 @@ const ThumbGrid = ({ images, handleOpen, classes }) => {
   console.log(classes)
   return (
     <>
-      <div className="gallery__image">
+      <div className="gallery__image  ">
         {images.map((image, i) => (
-          <div className="image-card">
-            <ButtonBase onClick={handleOpen(i)} className="image">
+          <div className="image-card about__rightContentImage ">
+            <ButtonBase
+              onClick={handleOpen(i)}
+              className="image karmasbar__image"
+            >
               <Img
                 fluid={image.node.childImageSharp.fluid}
                 className={classes.thumbnail}
               />
             </ButtonBase>
+            <div className="figmation"></div>
           </div>
         ))}
       </div>
