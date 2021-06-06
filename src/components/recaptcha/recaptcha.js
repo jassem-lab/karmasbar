@@ -5,10 +5,7 @@ const onChange = value => {
   console.log(("captcha value", value))
 }
 
-
 const Recaptcha = () => {
-  const [isVerified, setIsVerified] = useState(false)
-
   return (
     <div>
       <ReCAPTCHA

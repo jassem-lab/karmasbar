@@ -8,8 +8,6 @@ import CoreStyles from "react-awesome-slider/src/core/styles.scss"
 import { FaQuoteLeft } from "react-icons/fa"
 import TitleBorder from "../../images/titleborder.png"
 
-// import AnimationStyles from "react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss"
-// import AnimationStyles from "react-awesome-slider/src/styled/cube-animation/cube-animation.scss"
 const AutoplaySlider = withAutoplay(AwesomeSlider)
 
 const Slider2 = () => {

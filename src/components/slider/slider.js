@@ -1,11 +1,10 @@
 import React from "react"
 import { sliderContent } from "./sliderContent"
 import Button from "../button/Button"
-import AwesomeSliderStyles from "react-awesome-slider/dist/styles.css?raw"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
 import AwesomeSlider from "react-awesome-slider"
 import "react-awesome-slider/dist/styles.css"
-import CoreStyles from "react-awesome-slider/src/core/styles.scss"
+// import CoreStyles from "react-awesome-slider/src/core/styles.scss"
 
 const AutoplaySlider = withAutoplay(AwesomeSlider)
 
@@ -14,12 +13,10 @@ const Slider = () => {
     <div>
       <AutoplaySlider
         bullets="false"
-       
         className="slider"
         play={true}
         cancelOnInteraction={false} // should stop playing on user interaction
         interval={3000}
-        // cssModule={(AwesomeSliderStyles, CoreStyles)}
       >
         {sliderContent.map(item => (
           <div

@@ -1,7 +1,3 @@
-
-
-
-
 const postQuery = `
   {
      allWpPost {
@@ -60,7 +56,7 @@ module.exports = {
         ],
       },
     },
-
+    "gatsby-plugin-styled-components",
     {
       resolve: `gatsby-plugin-lodash`,
       options: {
@@ -93,7 +89,7 @@ module.exports = {
         icon: `src/images/Logo.png`, // This path is relative to the root of the site.
       },
     },
-
+    `gatsby-plugin-preact`,
     {
       resolve: "gatsby-source-wordpress",
       options: {
