@@ -11,11 +11,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  color: var(--text);
+  color: #666;
   font-size: 16px;
   position: relative;
   overscroll-behavior-y: none;
   min-height: 100%;
+  line-height: 26px;
   display: grid;
   grid-template-rows: 1fr auto;
   font-weight: 600;
