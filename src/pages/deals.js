@@ -45,7 +45,11 @@ const Deals = () => {
           <span style={{ color: `#2c2c2c` }}>Our Special</span> Offers
           <div>
             {" "}
-            <img src={TitleBorder} className="about__titleBorder" />
+            <img
+              src={TitleBorder}
+              alt="title border"
+              className="about__titleBorder"
+            />
           </div>
         </h2>
         <img src={Offer} alt="Offer image" className="deals__image" />
@@ -65,7 +69,8 @@ const Deals = () => {
           </div>
         </div>
         <h2 className="countdown__message">
-          Sorry, You Missed it! 🙁 We're Launching Our Next Promotion Soon!
+          Sorry, You Missed it! <span>🙁</span> We're Launching Our Next
+          Promotion Soon!
         </h2>
       </div>
     </Layout>

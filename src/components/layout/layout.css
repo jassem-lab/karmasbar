@@ -5,7 +5,10 @@ html {
   box-sizing: border-box;
   height: 100%;
 }
-
+img {
+  width: inherit;
+  height: inherit;
+}
 body {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;

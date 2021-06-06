@@ -3,8 +3,6 @@ import Img from "gatsby-image"
 import useWindowSize from "../../hooks/useWindowSize"
 
 const NonStretchedImage = props => {
-  const { width } = useWindowSize()
-
   let normalizedProps = props
   console.log(props.fluid.presentationWidth)
   if (props.fluid && props.fluid.presentationWidth) {

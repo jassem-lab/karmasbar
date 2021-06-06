@@ -13,7 +13,7 @@ import AppetizerOffer from "../images/Appetizer-Offer-01-300x233.jpg"
 import secondBannerImage from "../images/Interior-768x576.jpg"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
-import { FadeIn } from "../components/fadeIn/fadeIn"
+// import { FadeIn } from "../components/fadeIn/fadeIn"
 import parse from "html-react-parser"
 
 const IndexPage = ({ data: { allWpPost } }) => {

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
 
-import { withStyles, ButtonBase, Grid } from "@material-ui/core"
+import { withStyles, ButtonBase } from "@material-ui/core"
 
 const style = theme => ({
   previewButton: {
