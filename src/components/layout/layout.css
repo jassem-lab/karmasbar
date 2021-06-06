@@ -20,9 +20,9 @@ body {
   overscroll-behavior-y: none;
   min-height: 100%;
   line-height: 26px;
-  display: grid;
   grid-template-rows: 1fr auto;
   font-weight: 600;
+  margin : 0 auto ; 
 }
 main {
   height: 100%;
