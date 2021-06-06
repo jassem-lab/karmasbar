@@ -34,7 +34,7 @@
     "html-react-parser": "^1.2.6",
     "lightbox-react": "^0.3.8",
     "lodash": "^4.17.21",
-    "mapbox-gl": "^2.2.0",
+    "mapbox-gl": "^1.13.0",
     "node-sass": "^6.0.0",
     "preact": "^10.5.13",
     "preact-render-to-string": "^5.1.19",
