@@ -13,6 +13,7 @@ import AppetizerOffer from "../images/Appetizer-Offer-01-300x233.jpg"
 import secondBannerImage from "../images/Interior-768x576.jpg"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
+import { FadeIn } from "../components/fadeIn/fadeIn"
 import parse from "html-react-parser"
 
 const IndexPage = ({ data: { allWpPost } }) => {
@@ -28,38 +29,40 @@ const IndexPage = ({ data: { allWpPost } }) => {
       <Seo title="Home" />
       <Slider />
       <div className="homepage__content">
-        <div className="homepage__services">
-          <div className="homepage__services__box">
-            <img src={table} alt="table" style={{ width: `100px` }} />
-            <h3 className="homepage__services__title">
-              Relaxing <span className="colored__part">Atmosphere</span>
-            </h3>
-            <p className="homepage__services__desc">
-              Freshly remodeled from the ground up, hanging out at Karma's is
-              like home away from home.
-            </p>
+       
+          <div className="homepage__services">
+            <div className="homepage__services__box">
+              <img src={table} alt="table" style={{ width: `100px` }} />
+              <h3 className="homepage__services__title">
+                Relaxing <span className="colored__part">Atmosphere</span>
+              </h3>
+              <p className="homepage__services__desc">
+                Freshly remodeled from the ground up, hanging out at Karma's is
+                like home away from home.
+              </p>
+            </div>
+            <div className="homepage__services__box">
+              <img src={food} alt="table" style={{ width: `100px` }} />
+              <h3 className="homepage__services__title">
+                Real <span className="colored__part"> Quality Food</span>
+              </h3>
+              <p className="homepage__services__desc">
+                Bar food with the freshness of a home-cooked meal. We make our
+                food fresh from scratch, using family recipes.
+              </p>
+            </div>
+            <div className="homepage__services__box">
+              <img src={dollar} alt="table" style={{ width: `100px` }} />
+              <h3 className="homepage__services__title">
+                <span className="colored__part"> Happy Hour</span> All Week
+              </h3>
+              <p className="homepage__services__desc">
+                All Premium, Well, Doemstic & Import Beers, & Wine are included
+                in our reimagined Happy Hour .
+              </p>
+            </div>
           </div>
-          <div className="homepage__services__box">
-            <img src={food} alt="table" style={{ width: `100px` }} />
-            <h3 className="homepage__services__title">
-              Real <span className="colored__part"> Quality Food</span>
-            </h3>
-            <p className="homepage__services__desc">
-              Bar food with the freshness of a home-cooked meal. We make our
-              food fresh from scratch, using family recipes.
-            </p>
-          </div>
-          <div className="homepage__services__box">
-            <img src={dollar} alt="table" style={{ width: `100px` }} />
-            <h3 className="homepage__services__title">
-              <span className="colored__part"> Happy Hour</span> All Week
-            </h3>
-            <p className="homepage__services__desc">
-              All Premium, Well, Doemstic & Import Beers, & Wine are included in
-              our reimagined Happy Hour .
-            </p>
-          </div>
-        </div>
+       
         <div className="welcome__content">
           <h1
             className="about__leftContent__title blackTitle"
@@ -98,7 +101,7 @@ const IndexPage = ({ data: { allWpPost } }) => {
             food, come and see what Karma’s is all about.
           </p>
           <div className="gallery"></div>
-         <Gallery/>
+          <Gallery />
         </div>
         <div className="home__second__banner">
           <div className="home__second__banner__content">
