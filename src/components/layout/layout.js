@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
       <Menu />
 
       <AnimatePresence>
-        <main variants={variants} initial="initial" animate="enter" exit="exit">
+        <main >
           {children}
         </main>
       </AnimatePresence>
