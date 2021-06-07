@@ -23,7 +23,6 @@ const style = theme => ({
 })
 
 const ThumbGrid = ({ images, handleOpen, classes }) => {
-  console.log(classes)
   return (
     <>
       <div className="gallery__image  ">

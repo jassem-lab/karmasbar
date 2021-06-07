@@ -22,7 +22,6 @@ const IndexPage = ({ data: { allWpPost } }) => {
     fluid: allWpPost.featuredImage?.node?.localFile?.childImageSharp?.fluid,
     alt: allWpPost.featuredImage?.node?.alt || ``,
   }
-  console.log(posts)
 
   return (
     <Layout>

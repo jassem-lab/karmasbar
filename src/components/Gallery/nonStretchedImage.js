@@ -4,7 +4,6 @@ import useWindowSize from "../../hooks/useWindowSize"
 
 const NonStretchedImage = props => {
   let normalizedProps = props
-  console.log(props.fluid.presentationWidth)
   if (props.fluid && props.fluid.presentationWidth) {
     normalizedProps = {
       ...props,

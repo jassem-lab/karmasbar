@@ -14,7 +14,6 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
     fluid: post.featuredImage?.node?.localFile?.childImageSharp?.fluid,
     alt: post.featuredImage?.node?.alt || ``,
   }
-  console.log(post)
   return (
     <Layout>
       <Seo title={post.title} description={post.excerpt} />

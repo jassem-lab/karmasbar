@@ -2,7 +2,6 @@ import React from "react"
 import ReCAPTCHA from "react-google-recaptcha"
 
 const onChange = value => {
-  console.log(("captcha value", value))
 }
 
 const Recaptcha = () => {
