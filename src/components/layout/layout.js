@@ -3,47 +3,42 @@ import PropTypes from "prop-types"
 import Menu from "../nav/Menu"
 import "./layout.css"
 import Footer from "../footer/footer"
-import { motion, AnimatePresence } from "framer-motion"
-import useWindowSize from "../../hooks/useWindowSize"
+// import { motion, AnimatePresence } from "framer-motion"
+// import useWindowSize from "../../hooks/useWindowSize"
 
 const Layout = ({ children }) => {
-  const { width } = useWindowSize()
+  // const { width } = useWindowSize()
 
-  const duration = 0.2
+  // const duration = 0.2
 
-  const variants = {
-    initial: {
-      opacity: 0,
-      x: -width,
-    },
-    enter: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: duration,
-        delay: duration,
-        when: "beforeChildren",
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: { duration: duration },
-    },
-  }
+  // const variants = {
+  //   initial: {
+  //     opacity: 0,
+  //     x: -width,
+  //   },
+  //   enter: {
+  //     opacity: 1,
+  //     x: 0,
+  //     transition: {
+  //       duration: duration,
+  //       delay: duration,
+  //       when: "beforeChildren",
+  //     },
+  //   },
+  //   exit: {
+  //     opacity: 0,
+  //     transition: { duration: duration },
+  //   },
+  // }
 
   return (
     <>
       <Menu />
 
       <AnimatePresence>
-        <motion.main
-          variants={variants}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-        >
+        <main variants={variants} initial="initial" animate="enter" exit="exit">
           {children}
-        </motion.main>
+        </main>
       </AnimatePresence>
 
       <Footer />

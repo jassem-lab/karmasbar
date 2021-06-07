@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "karmasbar",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "karmasbar restaurant website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Karmasbar",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@react-icons/all-files": "^4.1.0",

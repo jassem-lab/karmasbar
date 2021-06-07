@@ -779,9 +779,7 @@ textarea {
     display: flex;
     flex-direction: column;
   }
-  .image {
-    width: 100%;
-  }
+
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
