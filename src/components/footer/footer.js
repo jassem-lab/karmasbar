@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
         </section>
         <section className="ft-item ft-days-table">
-          <h3 className="ft-days-table__title">
+          <h3 className="ft-item__title">
             If We’re Busy We’ll Be Open Past 8pm, Call & Ask!
           </h3>
           {timeTable.map((item, key) => (
@@ -35,12 +35,12 @@ const Footer = () => {
       </div>
       <section class="ft-legal">
         <ul class="ft-legal-list">
-          <li >
+          <li>
             <p>
               {" "}
               © 2020,{" "}
               <a href="#" style={{ color: `#ed2433` }}>
-              <strong>  Karma’s House of Spirits </strong>
+                <strong> Karma’s House of Spirits </strong>
               </a>
               . All rights reserved
             </p>
@@ -50,7 +50,7 @@ const Footer = () => {
               value={{
                 color: `blue`,
                 className: `global-class-name`,
-                size: `50px`,
+                size: `30px`,
               }}
             >
               <RiFacebookCircleFill className="ft__icons" />
@@ -60,7 +60,7 @@ const Footer = () => {
               value={{
                 color: `white`,
                 className: `global-class-name`,
-                size: `50px`,
+                size: `30px`,
               }}
             >
               <AiFillGooglePlusSquare className="ft__icons" />
@@ -69,7 +69,7 @@ const Footer = () => {
               value={{
                 color: `red`,
                 className: `global-class-name`,
-                size: `50px`,
+                size: `30px`,
               }}
             >
               <FaYoutube className="ft__icons" />

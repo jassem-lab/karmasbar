@@ -31,10 +31,12 @@ const Slider = () => {
               textAlign: `center`,
             }}
           >
+          <div className="first__slider__content">
             <span className="sliderAlt">{item.sliderAlt}</span>
             <h1 className="sliderTitle">{item.sliderTitle}</h1>
             <p className="sliderDesc">{item.sliderDesc}</p>
             <Button text={item.sliderLinkPath} link={item.sliderLinkUrl} />
+            </div>
           </div>
         ))}
       </AutoplaySlider>

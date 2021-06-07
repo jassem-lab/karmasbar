@@ -17,12 +17,13 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content:center ; 
-
+  flex-direction: row;
   margin : 0 auto ; 
 }
 @media only screen and (min-width: 29.8125rem /* 477px */) {
   
   .ft-main {
+    flex-direction : column ; 
     justify-content: space-evenly;
   }
 }
@@ -32,10 +33,10 @@ footer {
   }
 }
 .ft-main-item {
-  padding: 1.25rem;
-  padding: 40px 34px 40px 23px;
 
-  min-width: 12.5rem;
+  padding: 40px 34px 40px 23px;
+  flex : 1 ; 
+  
 }
 
 
@@ -47,7 +48,7 @@ footer {
   justify-content : space-between ; 
   flex-direction: row;
   margin : 0 auto ; 
-  max-width : 80%;
+  padding : 5px 10px ; 
   font-weight: 500 ;
 }
 .ft-legal {
@@ -65,13 +66,14 @@ footer {
   padding: 10px 0;
 }
 .ft-days-table {
+  flex : 1 ; 
   color: #ed2433;
   padding: 0 34px 40px 23px;
-  width: 33.77%;
 
   text-align: center;
 }
 .ft-days-table__title {
+  font-size : 20px !important; 
   color: #ed2433;
   
   font-weight: 400;
@@ -85,6 +87,7 @@ li {
   clear: both;
   display: block;
   list-style: none;
+  font-size : 10px ;
 }
 
 .days__list{

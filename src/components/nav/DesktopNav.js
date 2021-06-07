@@ -62,11 +62,12 @@ const DesktopNav = styled.nav`
     margin-left: 20px;
     max-width: 150px;
     @media screen and (max-width: 768px) {
+      margin-left: 0px;
       max-width: 250px;
-      padding-top: 20px;
-      padding-left: 20px;
-      height: 65%%;
-      width: 70%;
+      padding-top: 10px;
+      padding-left: 5px;
+      height: 30%%;
+      width: 40%;
       z-index: 3000;
     }
   }
@@ -84,7 +85,7 @@ const DesktopNav = styled.nav`
       background: black;
     }
     @media screen and (max-width: 768px) {
-      margin-right: 50px;
+      margin-right: 10px;
       display: block;
     }
   }

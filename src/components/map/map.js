@@ -8,7 +8,7 @@ const MAPBOX_TOKEN =
   "pk.eyJ1IjoiamFzc2VtZGV2IiwiYSI6ImNrbmIxdml0dzE3b2sycXRhNGd3ZDdhZXQifQ.2u53QU0_8NyykIK3yYVxrA"
 
 const mapContainerStyle = {
-  width: "600px",
+  width: "350px",
   height: "250px",
 }
 

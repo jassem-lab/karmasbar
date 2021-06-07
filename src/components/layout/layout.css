@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
 
 html {
   box-sizing: border-box;
@@ -13,16 +15,14 @@ body {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  overflow-x: hidden;
   color: #666;
   font-size: 16px;
-  position: relative;
-  overscroll-behavior-y: none;
-  min-height: 100%;
+  width: 100vw;
   line-height: 26px;
-  grid-template-rows: 1fr auto;
+  /* grid-template-rows: 1fr auto; */
   font-weight: 600;
-  margin : 0 auto ; 
+  margin: 0 auto !important ;
 }
 main {
   height: 100%;
@@ -125,6 +125,17 @@ a {
   margin-bottom: 15px;
   display: block;
 }
+@media (max-width: 768px) {
+  .sliderTitle {
+    font-size: 40px !important;
+  }
+  .sliderAlt {
+    font-size: 30px;
+  }
+  .sliderDesc {
+    font-size: 15px;
+  }
+}
 .sliderDesc {
   position: relative;
   font-size: 18px;
@@ -133,13 +144,7 @@ a {
   color: #fff;
   font-family: "ZCOOL XiaoWei", serif;
 }
-@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
 
-body {
-  font-family: "Open Sans", sans-serif;
-}
 .about__banner__title {
   color: #fff;
   font-size: 10vh;
@@ -272,13 +277,7 @@ body {
   max-width: 60%;
   margin: 0 auto;
 }
-@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
 
-body {
-  font-family: "Open Sans", sans-serif;
-}
 .contact__banner__title {
   color: #fff;
   font-size: 10vh;
@@ -366,9 +365,6 @@ textarea {
   justify-content: center;
   font-family: "ZCOOL XiaoWei", serif;
 }
-@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
-
 .deals__banner {
   background-position: 60% 50%;
   background-size: cover;
@@ -482,7 +478,6 @@ textarea {
   border-width: 20px 20px 20px 20px;
   border-color: #ed2433;
 }
-@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
 
 .menu__banner {
   background-position: 60% 50%;
@@ -698,13 +693,14 @@ textarea {
   z-index: 500000;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+
   justify-content: center;
   text-align: center;
 }
 .homepage__services__box {
   z-index: 2;
-  margin: 20px;
+  /* margin: 0 30px; */
+
   padding: 40px 60px 40px;
   background-color: #fff;
   box-shadow: 0px 10px 30px 0px rgb(44 44 44 / 7%);
@@ -712,14 +708,17 @@ textarea {
 }
 @media (max-width: 768px) {
   .homepage__services {
-    margin-top: 0px !important ;
-    margin: 80px 80px;
-
+    flex-direction: column;
+    margin-top: 0 !important;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
   .homepage__services__box {
     padding: 40px 100px 40px;
-    margin: 20px auto;
+    margin: 20px 0;
   }
 }
 .homepage__services__title {
@@ -779,7 +778,6 @@ textarea {
     display: flex;
     flex-direction: column;
   }
-
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -823,6 +821,19 @@ textarea {
   font-family: "Open Sans";
   font-weight: 400;
 }
+@media (max-width: 768px) {
+  .home__second__banner {
+    flex-direction: column !important ;
+    align-items: center !important;
+    margin: 0 auto !important ;
+    padding: 10px 20px;
+  }
+  .home__second__banner__content {
+    margin: 0 !important ;
+    text-align: center !important;
+    padding: 30px 0 !important;
+  }
+}
 .secondSlider {
   background-color: transparent;
   padding: 0 300px;
@@ -837,11 +848,7 @@ textarea {
   font-style: italic;
   line-height: 32px;
 }
-@media (max-width: 768px) {
-  .home__second__banner__content {
-    padding: 50px 0;
-  }
-}
+
 @media (max-width: 768px) {
   .secondSlider {
     padding: 0 !important;
