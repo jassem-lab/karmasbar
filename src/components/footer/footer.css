@@ -10,12 +10,11 @@ footer {
 }
 /* Footer main */
 .ft-main {
-  padding: 1.25rem 1.875rem;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
-  margin: 0 auto;
 }
 @media only screen and (max-width: 29.8125rem /* 477px */) {
   .ft-main {
@@ -60,8 +59,8 @@ footer {
 .ft-days-table {
   flex: 1;
   color: #ed2433;
-  padding: 0 34px 40px 23px;
-
+  margin: 0;
+  padding: 20px 20px ;
   text-align: center;
 }
 .ft-days-table__title {
@@ -94,5 +93,6 @@ li {
   display: flex;
   flex: 1;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
 }
