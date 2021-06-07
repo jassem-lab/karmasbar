@@ -16,7 +16,7 @@ const Footer = () => {
             Karma’s House of Spirits 329 Lake Blvd Redding CA 96003 530-691-4061
           </div>
         </section>
-        <section className="ft-item ft-days-table">
+        <section className=" ft-days-table">
           <h3 className="ft-item__title">
             If We’re Busy We’ll Be Open Past 8pm, Call & Ask!
           </h3>

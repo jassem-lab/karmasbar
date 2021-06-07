@@ -16,8 +16,8 @@ const style = theme => ({
     boxShadow: "0 0 25px -5px rgba(0,0,0,0.3)",
   },
   thumbnail: {
-    height: `30vh`,
-    width: `25vw`,
+    height: `100%`,
+    width: `100%`,
     borderRadius: 4,
   },
 })

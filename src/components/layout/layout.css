@@ -957,3 +957,8 @@ textarea {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 768px) {
+  .NonStretchedImage {
+    margin: 60% auto !important ;
+  }
+}

@@ -18,11 +18,11 @@ const NonStretchedImage = props => {
         margin: "15% auto",
         alignItems: `center`,
         // Used to center the image
-        marginBottom: "50px",
+        
       },
     }
   }
 
-  return <Img {...normalizedProps} />
+  return <Img {...normalizedProps} className="NonStretchedImage"/>
 }
 export default NonStretchedImage

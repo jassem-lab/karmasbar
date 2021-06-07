@@ -1,29 +1,25 @@
-
 footer {
   background-color: #191919;
   color: #bbb;
   line-height: 1.5;
   padding: 50px 0px 9px 0px;
   box-sizing: border-box;
-  clear:both ; 
+  clear: both;
   grid-row-start: 2;
   grid-row-end: 3;
-
-  
 }
 /* Footer main */
 .ft-main {
   padding: 1.25rem 1.875rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content:center ; 
+  justify-content: center;
   flex-direction: row;
-  margin : 0 auto ; 
+  margin: 0 auto;
 }
-@media only screen and (min-width: 29.8125rem /* 477px */) {
-  
+@media only screen and (max-width: 29.8125rem /* 477px */) {
   .ft-main {
-    flex-direction : column ; 
+    flex-direction: column;
     justify-content: space-evenly;
   }
 }
@@ -33,30 +29,26 @@ footer {
   }
 }
 .ft-main-item {
-
   padding: 40px 34px 40px 23px;
-  flex : 1 ; 
-  
+  flex: 1;
 }
-
 
 /* Footer legal */
 .ft-legal-list {
-  display : flex ; 
-  flex-wrap : wrap ; 
-  align-items : center ; 
-  justify-content : space-between ; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   flex-direction: row;
-  margin : 0 auto ; 
-  padding : 5px 10px ; 
-  font-weight: 500 ;
+  margin: 0 auto;
+  padding: 5px 10px;
+  font-weight: 500;
 }
 .ft-legal {
   background-color: #191919;
   border-style: solid;
   border-width: 1px 0px 0px 0px;
   border-color: #676767ed;
-  
 
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
@@ -66,36 +58,41 @@ footer {
   padding: 10px 0;
 }
 .ft-days-table {
-  flex : 1 ; 
+  flex: 1;
   color: #ed2433;
   padding: 0 34px 40px 23px;
 
   text-align: center;
 }
 .ft-days-table__title {
-  font-size : 20px !important; 
+  font-size: 20px !important;
   color: #ed2433;
-  
+
   font-weight: 400;
 }
 .ft-item__title {
-  font-size: 15px ; 
-  margin-bottom : 30px ;
+  font-size: 15px;
+  margin-bottom: 30px;
   font-weight: 400;
 }
 li {
   clear: both;
   display: block;
   list-style: none;
-  font-size : 10px ;
+  font-size: 10px;
 }
 
-.days__list{
-  display : flex  ;
+.days__list {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin : 0 auto ;  
-
+  margin: 0 auto;
+}
+.ft-item {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin: 0 auto;
 }
