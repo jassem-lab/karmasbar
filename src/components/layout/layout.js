@@ -35,11 +35,7 @@ const Layout = ({ children }) => {
     <>
       <Menu />
 
-      <AnimatePresence>
-        <main >
-          {children}
-        </main>
-      </AnimatePresence>
+      <main>{children}</main>
 
       <Footer />
     </>
