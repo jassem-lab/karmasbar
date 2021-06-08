@@ -4,7 +4,10 @@ import Button from "../button/Button"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
 import AwesomeSlider from "react-awesome-slider"
 import "react-awesome-slider/dist/styles.css"
-// import CoreStyles from "react-awesome-slider/src/core/styles.scss"
+import {graphql , StaticQuery} from "gatsby"
+
+
+
 
 const AutoplaySlider = withAutoplay(AwesomeSlider)
 
@@ -31,11 +34,11 @@ const Slider = () => {
               textAlign: `center`,
             }}
           >
-          <div className="first__slider__content">
-            <span className="sliderAlt">{item.sliderAlt}</span>
-            <h1 className="sliderTitle">{item.sliderTitle}</h1>
-            <p className="sliderDesc">{item.sliderDesc}</p>
-            <Button text={item.sliderLinkPath} link={item.sliderLinkUrl} />
+            <div className="first__slider__content">
+              <span className="sliderAlt">{item.sliderAlt}</span>
+              <h1 className="sliderTitle">{item.sliderTitle}</h1>
+              <p className="sliderDesc">{item.sliderDesc}</p>
+              <Button text={item.sliderLinkPath} link={item.sliderLinkUrl} />
             </div>
           </div>
         ))}

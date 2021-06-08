@@ -1,6 +1,7 @@
 import Image1 from "../../images/Meatloaf-Sliders-Redding-CA-scaled-b-1024x768.jpg"
 import Image2 from "../../images/Interior-Dark-b-1536x1152.jpg"
 import image3 from "../../images/Happy-Hour6-b-1536x1152.jpg"
+
 export const sliderContent = [
   {
     sourceUrl: Image1,
