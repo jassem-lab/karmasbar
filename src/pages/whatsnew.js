@@ -41,7 +41,7 @@ const Whatsnew = ({ data, data: { allWpPost } }) => {
         <div style={{ marginTop: `220px` }}></div>
       </div>
 
-      <InstantSearch searchClient={searchClient} indexName="karmasbar">
+      <InstantSearch searchClient={searchClient} indexName="karmasbar_blog">
         <div className="whatsnew__content">
           <ol style={{ listStyle: `none` }} className="content">
             <div className="whatsnew__left">
