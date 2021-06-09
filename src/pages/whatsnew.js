@@ -10,7 +10,8 @@ import PostsPreview from "../components/post-preview/post-preview"
 
 const searchClient = algoliasearch(
   "R1NHCEEP4J",
-  "6203049fa78007ce80a72170c6d41ef0"
+  // "6203049fa78007ce80a72170c6d41ef0"
+  "4d1a5b45cad8c691df09ad7af4b3e138"
 )
 
 const Whatsnew = ({ data, data: { allWpPost } }) => {
