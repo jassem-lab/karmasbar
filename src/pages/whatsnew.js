@@ -9,8 +9,8 @@ import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
 import PostsPreview from "../components/post-preview/post-preview"
 
 const searchClient = algoliasearch(
-  "UF0VVRAUVO",
-  "4d8121645a60e81ef44a947de24cf6e9"
+  "R1NHCEEP4J",
+  "6203049fa78007ce80a72170c6d41ef0"
 )
 
 const Whatsnew = ({ data, data: { allWpPost } }) => {

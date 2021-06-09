@@ -56,6 +56,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: true,
+      },
+    },
+    "gatsby-plugin-loadable-components-ssr",
     "gatsby-plugin-styled-components",
     {
       resolve: `gatsby-plugin-lodash`,

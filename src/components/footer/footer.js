@@ -1,11 +1,14 @@
 import React from "react"
 import "./footer.css"
 import { timeTable } from "./TimeTable"
-import Map from "../map/map"
+// import Map from "../map/map"
 import { RiFacebookCircleFill } from "react-icons/ri"
 import { AiFillGooglePlusSquare } from "react-icons/ai"
 import { FaYoutube } from "react-icons/fa"
 import { IconContext } from "react-icons"
+import loadable from '@loadable/component'
+
+const Map = loadable(() => import("../map/map"))
 
 const Footer = () => {
   return (
