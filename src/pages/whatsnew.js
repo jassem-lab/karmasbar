@@ -9,9 +9,8 @@ import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
 import PostsPreview from "../components/post-preview/post-preview"
 
 const searchClient = algoliasearch(
-  "R1NHCEEP4J",
-  // "6203049fa78007ce80a72170c6d41ef0"
-  "4d1a5b45cad8c691df09ad7af4b3e138"
+  "UF0VVRAUVO",
+  "4d8121645a60e81ef44a947de24cf6e9"
 )
 
 const Whatsnew = ({ data, data: { allWpPost } }) => {
@@ -41,7 +40,7 @@ const Whatsnew = ({ data, data: { allWpPost } }) => {
         <div style={{ marginTop: `220px` }}></div>
       </div>
 
-      <InstantSearch searchClient={searchClient} indexName="karmasbar_blog">
+      <InstantSearch searchClient={searchClient} indexName="karmasbar">
         <div className="whatsnew__content">
           <ol style={{ listStyle: `none` }} className="content">
             <div className="whatsnew__left">
